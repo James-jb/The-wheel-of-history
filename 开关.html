@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>开关</title>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+        }
+        /* 按钮的设置 */
+        /* 有两个是因为 JS可以调用 */
+        
+        .open_bulb {
+            width: 250px;
+            height: 50px;
+            outline: none;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: transparent;
+            font-size: 16px;
+        }
+        
+        .close_bulb {
+            width: 250px;
+            height: 50px;
+            outline: none;
+            border: 2px solid white;
+            color: white;
+            background-color: transparent;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="open_bulb">Close The Bulb</button>
+
+
+
+    <script type="text/javascript">
+        var btn = document.querySelector('button');
+        var flag = 0;
+
+        //来开关灯 
+        btn.onclick = function() {
+            if (flag == 0) {
+                document.body.style.backgroundColor = '#000000';
+                //这里可以设置颜色哦！
+
+                this.innerHTML = 'Open The Bulb';
+
+                this.className = 'close_bulb';
+                // 引入css的呀
+                flag = 1;
+            } else if (flag == 1) {
+                document.body.style.backgroundColor = '#ffffff';
+                //这里可以设置颜色哦！
+
+                this.innerHTML = 'Close The Bulb';
+
+                this.className = 'open_bulb';
+                // 引入css的呀
+                flag = 0;
+                // 可能是归零
+            }
+        }
+    </script>
+    <!-- 注意：名字要写对呀！ -->
+</body>
+
+</html>
