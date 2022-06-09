@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩票</title>
+</head>
+<body>
+    <button onclick="createNumber()">生成</button>
+</body>
+<script>
+    // 0 ~ 9  随机生成7个数字
+
+    function createNumber() {
+        console.log(rand(0,10))
+    }
+
+    //随机函数  随机产生某个范围内的数字
+    function rand(min, max) {
+        return Math.floor(Math.random() * (max-min)) + min;
+    }
+</script>
+</html>
