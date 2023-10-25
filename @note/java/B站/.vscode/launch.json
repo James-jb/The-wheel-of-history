@@ -1,0 +1,336 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p184c",
+            "request": "launch",
+            "mainClass": "p184c",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p184b",
+            "request": "launch",
+            "mainClass": "p184b",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p184a",
+            "request": "launch",
+            "mainClass": "p184a",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p181",
+            "request": "launch",
+            "mainClass": "p181",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p180a",
+            "request": "launch",
+            "mainClass": "p180a",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p180",
+            "request": "launch",
+            "mainClass": "p180",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p179a",
+            "request": "launch",
+            "mainClass": "p179a",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p179",
+            "request": "launch",
+            "mainClass": "p179",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p177a",
+            "request": "launch",
+            "mainClass": "p177a",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p177",
+            "request": "launch",
+            "mainClass": "p177",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p167b",
+            "request": "launch",
+            "mainClass": "p167b",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p176",
+            "request": "launch",
+            "mainClass": "p176",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "P175a",
+            "request": "launch",
+            "mainClass": "P175a",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p175",
+            "request": "launch",
+            "mainClass": "p175",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p167",
+            "request": "launch",
+            "mainClass": "p167",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p166pachong",
+            "request": "launch",
+            "mainClass": "p166pachong",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p163",
+            "request": "launch",
+            "mainClass": "p163",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p159obj",
+            "request": "launch",
+            "mainClass": "p159obj",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "P158Runtime",
+            "request": "launch",
+            "mainClass": "P158Runtime",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p156sxhs",
+            "request": "launch",
+            "mainClass": "p156sxhs",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "StudentSystem",
+            "request": "launch",
+            "mainClass": "StudentSystem",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p113",
+            "request": "launch",
+            "mainClass": "p113",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p109",
+            "request": "launch",
+            "mainClass": "p109",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "P32",
+            "request": "launch",
+            "mainClass": "P32",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "P37",
+            "request": "launch",
+            "mainClass": "P37",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "a1",
+            "request": "launch",
+            "mainClass": "a1",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p100",
+            "request": "launch",
+            "mainClass": "p100",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p105",
+            "request": "launch",
+            "mainClass": "p105",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p108",
+            "request": "launch",
+            "mainClass": "p108",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p111",
+            "request": "launch",
+            "mainClass": "p111",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p112",
+            "request": "launch",
+            "mainClass": "p112",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p48",
+            "request": "launch",
+            "mainClass": "p48",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p50",
+            "request": "launch",
+            "mainClass": "p50",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p52",
+            "request": "launch",
+            "mainClass": "p52",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p53",
+            "request": "launch",
+            "mainClass": "p53",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p58",
+            "request": "launch",
+            "mainClass": "p58",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p59",
+            "request": "launch",
+            "mainClass": "p59",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p60",
+            "request": "launch",
+            "mainClass": "p60",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p61",
+            "request": "launch",
+            "mainClass": "p61",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p65",
+            "request": "launch",
+            "mainClass": "p65",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p72",
+            "request": "launch",
+            "mainClass": "p72",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p72_1",
+            "request": "launch",
+            "mainClass": "p72_1",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p75",
+            "request": "launch",
+            "mainClass": "p75",
+            "projectName": "B站_14dfb2b4"
+        },
+        {
+            "type": "java",
+            "name": "p76",
+            "request": "launch",
+            "mainClass": "p76",
+            "projectName": "B站_14dfb2b4"
+        }
+    ]
+}
