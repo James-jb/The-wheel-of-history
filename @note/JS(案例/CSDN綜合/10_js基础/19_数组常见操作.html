@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组常见操作</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 数组元素的修改与访问
+    var books = ["西游记","水浒传","三国演义","红楼"]
+    // 通过下标访问 修改元素
+    console.log(books[0])
+    books[3] = "石头记";
+    console.log(books.length);
+
+    // push(n)   在数组最后添加一个元素n
+    // pop()     删除数组最后一个元素
+    // books.push("聊斋");
+    // books.pop();
+    // books.pop();
+
+    // unshift(n)  在数组的开头添加一个元素n  
+    // shift()     删除数组的第一个元素
+    // books.unshift("山海经");
+    // books.shift();
+
+    // concat() 拼接数组  返回一个新的数组
+    // var arr = ["山海经","聊斋"];
+    // books = books.concat(arr);
+
+    // splice(下标，删除元素的个数，新插入的元素列表)
+    // books.splice(1,2,"聊斋","钢铁是怎样炼成的")
+
+    // slice(start[, end])  截取元素  返回一个新的数组
+    // [start, end)
+    // var a = books.slice(1,2);
+    // console.log(a);
+
+    // reverse() 反转数组
+    // console.log(books.reverse())
+
+    // join(规则)  按照规则将数组转为字符串
+    // console.log(books.join(" "))
+
+    // indexOf(子元素)  从数组中查询子元素，返回下标，没有就返回-1
+    // console.log(books.indexOf("朝花夕拾"))
+
+    // 遍历
+    // 1. for  while
+    // 2. forEach
+    // 函数做参数，称之为回调函数
+    // item 数组的每一个值
+    // index 下标
+    // books.forEach(function(item, index) {
+    //     console.log(item, index)
+    // })
+    // 3. map  遍历  回调函数中return一个新的值 返回新数组
+    // var arr = [1,2,3,4];
+    // var newArr = arr.map(function(item) {
+    //     return item ** 2;
+    // })
+    // console.log(newArr)
+
+    // sort()  排序  
+    var arr = [7, 18, -9, -23, 0, 56];
+    // a b是数组相邻的两个值
+    // 回调函数，如果返回值大于0，就交换a b的顺序
+    arr.sort(function(a, b) {
+        return a - b;
+    })
+    console.log(arr)
+
+    // console.log(books);
+</script>
+</html>

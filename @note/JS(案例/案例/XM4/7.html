@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#back{
+				width: 300px;
+				height: 25px;
+				background-color: #ccc;
+				border: 5px solid #999;
+				
+				border-radius: 50px;
+			}
+			#bar{
+				height: 100%;
+				
+				line-height: 25px;
+				float: left;
+				text-align: center;
+				background: #4f4;
+				
+				border-radius: 50px;
+			}
+		</style>
+		<script>
+			// 开始直接 运行
+			onload=function(){
+				run()
+			}
+			function run(){
+				var bar=document.getElementById("bar");
+				
+				bar.style.width=parseInt(bar.style.width)+1+"%";//计算
+				bar.innerHTML=bar.style.width;//显示当前
+				
+				// 停下来
+				if(bar.style.width=="100%"){
+					clearTimeout(timer);
+					return;
+				}
+				
+				var timer = setTimeout("run()",100);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="back">
+			<div id="bar" style="width: 0%;"> </div>
+		</div>
+	</body>
+</html>

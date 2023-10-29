@@ -1,0 +1,70 @@
+/* 所以内外边距清理为0 */
+*{
+	margin: 0;
+	padding: 0;
+      /* CSS3盒子模型*/
+    box-sizing: border-box;
+
+}
+/* 斜体不倾斜 */
+em.i{
+	font-style: normal;
+}
+/* 去掉小圆点 */
+li{
+	list-style: none;
+}
+
+img{
+	/* 低版本 有边框问题 */
+	border: 0; 
+	/* 图片缝隙 */
+	vertical-align: middle; 
+}
+
+button{
+	/* 鼠标样式变小手 */
+	cursor: pointer
+}
+
+a {
+	/* 链接颜色 */
+	color: ;
+	/* 取消下划线 */
+	text-decoration: none;
+}
+
+a:hover{
+	/* 鼠标经过变色 */
+	color: #FF0000;
+}
+
+button,
+input{
+	/* 按钮字体设置 */
+	font-family: ;
+}
+
+body{
+	/* 抗锯齿性 让文字跟进清晰/css*/
+	-webkit-font-smoothing: antialiased;
+	/* 背景颜色 */
+	background-color: ;
+	/* 指定字体 行高*/
+	font:12px/1.5
+	/* 颜色 */
+	color:
+}
+ /* 隐藏样式 */
+display: none;
+
+/* 清除浮动 */
+.clearfix:after{
+	visibility: hidden;
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0;
+}
+
+/* \5B8B\4F53\ 是 宋体 */

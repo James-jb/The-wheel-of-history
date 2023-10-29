@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			li{
+				width: 100px;
+				height: 30px;
+				border: 1px solid red;
+				cursor: pointer;/* 手的形状 */
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="myul">
+			<li>首页</li>
+			<li>新闻</li>
+			<li>地址</li>
+			<li>我们</li>
+		</ul>
+		<div>
+			<button onclick="row()">横向</button>
+			<button onclick="col()">纵向</button>
+			<button onclick="removed()">去点</button>
+			<button onclick="showdot()">加点</button>
+			<button onclick="set()">设置图标</button>
+		</div>
+	</body>
+	<script>
+		var vul = document.getElementById("myul");
+
+		function row(){
+			vul.style.display="flex";
+		}
+		function col(){
+			vul.style.display="";
+		}
+		// 3
+		function removed(){
+			vul.style.listStyle="none";
+		}
+		// 4
+		function showdot(){
+			vul.style.listStyle="";
+		}
+		//加入图片
+		function set(){
+			vul.style.listStyleImage="url()";
+		}
+	</script>
+</html>

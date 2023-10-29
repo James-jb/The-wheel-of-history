@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡与捕获</title>
+    <style>
+        div {
+            /* width: 100px;
+            height: 100px;
+            margin-left: 120px; */
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1" style="background-color: pink;">
+        <div class="d2" style="background-color: tomato;">
+            <div class="d3" style="background-color: cyan;"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var d1 = document.querySelector(".d1");
+    var d2 = document.querySelector(".d2");
+    var d3 = document.querySelector(".d3");
+    
+    d1.addEventListener("click", function() {
+        console.log("d1");
+    }, true);
+    d2.addEventListener("click", function() {
+        console.log("d2");
+    }, true);
+    d3.addEventListener("click", function() {
+        console.log("d3");
+    }, true);
+
+    // 同一个事件，由子级传递给父级称之为事件冒泡
+    // 同一个事件，由父级传递给子级称之为事件捕获
+</script>
+</html>

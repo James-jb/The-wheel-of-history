@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数补充</title>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+</body>
+<script>
+    // 1. arguments
+    // function add() {
+    //     var sum = 0;
+    //     for (var i=0; i<arguments.length; i++) {
+    //         sum += arguments[i];
+    //     }
+    //     return sum
+    // }
+    // var n = add(1,2,3,4,5,6,7,8);
+    // console.log(n)
+
+    // 2. 匿名函数  回调函数
+    // var add = function(a,b) {
+    //     return a + b;
+    // }
+    // console.log(add(1,2))
+
+    // 3. 自执行函数
+    // (function(a,b,c) {
+    //     console.log(a+b+c)
+    // })(1,2,3)
+
+    // 4. 函数最后返回自身  递归函数
+    // 如果随机数不大于10，就一直打印
+    // function shown() {
+    //     var n = rand(0,12);
+    //     if (n > 10) {
+    //         return ;
+    //     }
+    //     console.log(n)
+    //     shown();
+    // }
+    // shown();
+
+    // function rand(min, max) {
+    //     return Math.round(Math.random() * (max-min) + min);
+    // }
+
+    // 用setTimeout实现setInterval
+
+    // function interval() {
+    //     setTimeout(function(){
+    //         console.log("123123")
+    //         interval();
+    //     }, 1000)
+    // }
+    // interval();
+
+    // 闭包
+    // 全局作用域不能调用局部变量
+
+//     function fn1() {
+//         var a = 1;
+//         function fn2() {
+//             return a;
+//         }
+
+//         return fn2;
+//     }
+//    var ok = fn1()();
+
+    var buts = document.getElementsByTagName("button");
+    // 闭包
+    // for (var i=0; i<buts.length; i++) {
+    //     (function(item) {
+    //         buts[item].onclick = function() {
+    //             console.log(item)
+    //         }
+    //     })(i)
+    // }
+    // 对象
+    for (var i=0; i<buts.length; i++) {
+        buts[i].index = i;  //单独做标记
+        buts[i].onclick = function() {
+            // this代表当前事件的拥有者
+            console.log(this.index)
+        }
+    }
+</script>
+</html>

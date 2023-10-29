@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui事件</title>
+    <style>
+        section {
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            overflow: scroll;
+        }
+        section div {
+            width: 100px;
+            height: 800px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        // body的内容还没有加载，所以获取不到
+        // var dOk = document.getElementById("ok");
+        // console.log(dOk);
+
+        window.onload = function() {
+            // dom节点加载完毕后执行
+            var dOk = document.getElementById("ok");
+            console.log(dOk);
+        }
+    </script>
+</head>
+<body>
+    <div id="ok">yes</div>
+    <section>
+        <div>123</div>
+    </section>
+</body>
+<script>
+    // resize  当浏览器大小发生变化时
+
+    // load   加载完毕后执行
+    var dOk = document.getElementById("ok");
+    console.log(dOk);
+
+    // scroll  滚动
+    var sec = document.querySelector("section");
+    sec.onscroll = function() {
+        console.log("翻滚吧");
+    }
+</script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 从0开始输出，输出0，5
+    // console.log(0)
+    // console.log(1)
+    // console.log(2)
+    // console.log(3)
+    // console.log(4)
+    // console.log(5)
+
+    // 循环
+    //  while
+    // while(条件) {
+    //     语句
+    // }
+    // var n = 0;
+    // while(n<=5) {
+    //     console.log(n)
+    //     n++;
+    // }
+
+    // 写作的时候要注意
+    // while(true) {
+    //     // 死循环
+    // }
+
+    // do while
+    // do {
+    //     代码块
+    // } while(条件)
+    // 至少执行一次代码块 
+    // var n = 0;
+    // do {
+    //     console.log(n)
+    // } while(n<0)
+
+    // for 
+    // for (a;b;c) {
+    //     d
+    // }
+    // for (var i=0; i<=5; i++) {
+    //     console.log(i);
+    // }
+    // a -> b -> d -> c -> b -> d -> c
+
+    // 写出 100以内的奇数
+    var all = 100;
+    // 1.
+    // for (var i=0; i<=all; i++) {
+    //     if (i%2 == 1) {
+    //         console.log(i);
+    //     }
+    // }
+    // 2.
+    // for (var i=1; i<=all; i+=2) {
+    //     console.log(i)
+    // }
+
+    // 输出100 以内的 斐波那契数列
+    // 1 1 2 3 5 8 13
+    // var a = 1;
+    // var b = 1;
+    // console.log(a)
+    // console.log(b)
+    // for (var i=0; i<100; i++) {
+    //     if (i == (a + b)) {
+    //         console.log(i);
+    //         a = b;
+    //         b = i;
+    //     }
+    // }
+
+    // 输出1 - 100
+    // 如果遇到了7或者7的倍数   就输出
+
+        // 生成随机数，  如果随机数是52  就停止输出
+
+    for (var i=1; i<=100; i++) {
+        if (i % 7 == 0) {
+            //终止本次循环,进入下一次循环
+            continue;
+        }
+        if (rand(30,55) == 52) {
+            // 终止所有的循环
+            console.log("满足条件，终止循环")
+            break;
+        }
+        console.log("i == " + i);
+    }
+
+    function rand(min, max) {
+        return Math.round(Math.random() * (max-min) + min);
+    }
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    // 三种创建方式
+    // 1.
+    // var array = new Array(1,2,3,4,5);
+    // console.log(array);
+
+    // 2. 
+    // var array = new Array(3);
+    // array[0] = 1
+    // console.log(array);
+
+    // 3. 
+    var sdmz = ["105个男人与3个女人的故事","一群男人的故事","一个男人与一群女人的故事","一路向西的故事"];
+    var lis = document.getElementsByTagName("li");
+    // 数组的遍历
+    for (var i=0; i<lis.length; i++) {
+        lis[i].innerHTML = sdmz[i];
+    }
+    // 可以通过取下标(索引)的方式获取或修改对应的数组元素
+</script>
+</html>

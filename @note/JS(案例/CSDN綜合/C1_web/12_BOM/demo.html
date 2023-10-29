@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+        .blue {
+            background-color: deepskyblue;
+        }
+        .red {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body class="blue">
+    
+</body>
+<script>    
+    // 移动端下  屏幕是 红色的
+    if (isMobile()) {
+        document.body.className = "red";
+    }
+
+
+    //判断是否是移动端
+    function isMobile() {
+        var arr = ["iOS", "iPhone", "iPad", "Android"];
+        var is = false;
+        for (var i=0; i<arr.length; i++) {
+            if (navigator.userAgent.indexOf(arr[i]) != -1) {
+                is = true;
+                break;
+            }
+        }
+        return is;
+    }
+</script>
+</html>

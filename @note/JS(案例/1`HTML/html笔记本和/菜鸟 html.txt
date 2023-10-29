@@ -1,0 +1,287 @@
+如何使用CSS
+CSS 是在 HTML 4 开始使用的,是为了更好的渲染HTML元素而引入的.
+
+CSS 可以通过以下方式添加到HTML中:
+
+内联样式- 在HTML元素中使用"style" 属性
+内部样式表 -在HTML文档头部 <head> 区域使用<style> 元素 来包含CSS
+外部引用 - 使用外部 CSS 文件
+
+
+
+1    基础
+1<h1>-<h6>  标题
+ 2<p>   段落
+ 3<a href="链接">    链接
+ 4<img src="图片地址"> 图像 
+ 5    width="  大小"       br换行
+       height=" 大小 "    <!---注释--->
+       
+ 2     属性
+ class 定义一个或多个类名
+ id      定义元素的唯一id
+ style  规定元素的行内样式（inline style）
+ title    描述了元素的额外信息 (作为工具条使用)
+ 
+ 3      文本格式化
+ <b>	     定义粗体文本               
+<em>   	 定义着重文字
+<i>	         定义斜体字
+<small>	 定义小号字
+<strong>	 定义加重语气
+<sub>    	 定义下标字
+<sup>	     定义上标字
+<ins>	     定义插入字
+<del>	     定义删除字
+
+4     "计算机输出" 标签
+<code>	定义计算机代码
+<kbd>	    定义键盘码
+<samp>	定义计算机代码样本
+<var>	    定义变量
+<pre>	    定义预格式文本
+
+5        引文, 引用, 及标签定义
+<abbr>	    定义缩写
+<address>	定义地址
+<bdo>         定义文字方向
+<blockquote>	定义长的引用
+<q>	            定义短的引用语
+<cite>	        定义引用、引证
+<dfn>      	定义一个定义项目。
+
+6       超链接（链接）
+<a href="网络地址">名称</a>
+<p>如果你将 target 属性设置为 & quot ; _blank & quot ;, 链接将在新窗口打开。</p>
+  quot ;
+   _blank 
+   quot
+   
+ 7          头部
+ <head>	定义了文档的信息
+<title>	定义了文档的标题
+<base>	定义了页面链接标签的默认链接地址
+<link>	定义了一个文档和外部资源之间的关系
+<meta>	定义了HTML文档中的元数据
+<script>	定义了客户端的脚本文件
+<style>	定义了HTML文档的样式文件
+
+8       背景颜色    background-color）
+<body style="background-color:yellow;">
+<h2 style="background-color:red;">字</h2>
+<p style="background-color:green;">字</p>
+
+ 9          字体, 字体颜色
+  font-family（字体），color（颜色），和font-size（字体大小）
+ <h1 style="font-family:verdana;">一个标题</h1>
+<p style="font-family:arial;color:red;font-size:20px;">一个段落。</p>
+
+10        文本对齐方式        
+text-align（文字对齐）属性指定文本的水平与垂直对齐方式
+<h1 style="text-align:center;">居中对齐的标题</h1>
+<p>这是一个段落。</p>
+
+11            图像- 图像标签
+（ <img>）和源属性（Src）
+<img src="url" alt="some_text">
+
+12            Alt属性 
+<img src="boat.gif" alt="Big Boat">
+
+13         设置图像的高度与宽度 
+<img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228">
+
+<img>	定义图像
+<map>	定义图像地图
+<area>	定义图像地图中的可点击区域
+
+14         表格列；
+<table border="1">
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+    </tr>
+    <tr>
+        <td>row 2, cell 1</td>
+        <td>row 2, cell 2</td>
+    </tr>
+</table>
+
+标签	描述
+<table>	定义表格
+<th>	定义表格的表头
+<tr>	定义表格的行
+<td>	定义表格单元
+<caption>	定义表格标题
+<colgroup>	定义表格列的组
+<col>	定义用于表格列的属性
+<thead>	定义表格的页眉
+<tbody>	定义表格的主体
+<tfoot>	定义表格的页脚
+
+无序列表列；
+<ol>或<ol> 
+<li>      Coffee</li>
+<li>    Milk</li>
+</ol>
+
+<dl>
+<dt>Coffee</dt>
+<dd>- black hot drink</dd>
+<dt>Milk</dt>
+<dd>- white cold drink</dd>
+</dl>
+
+标签  	描述
+<ol>	定义有序列表
+<ul>	定义无序列表
+<li> 	定义列表项
+<dl>	定义列表
+<dt>	自定义列表项目
+<dd>	定义自定列表项的描述
+
+区块；
+TML  分组标签
+标签 	描述
+<div>	定义了文档的区域，块级 (block-level)
+<span>	用来组合文档中的行内元素， 内联元素(inline)
+
+布局列；
+<div id="container" style="width:500px">
+ 
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+ 
+<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+<b>菜单</b><br>
+HTML<br>
+CSS<br>
+JavaScript</div>
+ 
+<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+内容在这里</div>
+ 
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+版权 ? runoob.com</div>
+
+标签	                          描述
+<div>	     定义文档区块，块级(block-level)
+<span>	 定义 span，用来组合文档中的行内元素。
+
+文本域（Text Fields）列；
+<form>
+First name: <input type="text" name="firstname"><br>
+Last name: <input type="text" name="lastname">
+</form>
+
+密码字段 列；
+<form>
+Password: <input type="password" name="pwd">
+</form>
+
+单选按钮（Radio Buttons）列；
+<form>
+<input type="radio" name="sex" value="male">Male<br>
+<input type="radio" name="sex" value="female">Female
+</form>
+
+复选框（Checkboxes）列；
+<form>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+<input type="checkbox" name="vehicle" value="Car">I have a car
+</form>
+
+提交按钮(Submit Button)
+<form name="input" action="html_form_action.php" method="get">
+Username: <input type="text" name="user">
+<input type="submit" value="Submit">
+</form
+
+标签	描述
+<form>	定义供用户输入的表单
+<input>	定义输入域
+<textarea>	定义文本域 (一个多行的输入控件)
+<label>	定义了 <input> 元素的标签，一般为输入标题
+<fieldset>	定义了一组相关的表单元素，并使用外框包含起来
+<legend>	定义了 <fieldset> 元素的标题
+<select>	定义了下拉选项列表
+<optgroup>	定义选项组
+<option>	定义下拉列表中的选项
+<button>	定义一个点击按钮
+<datalist>New	指定一个预先定义的输入控件选项列表
+<keygen>New	定义了表单的密钥对生成器字段
+<output>New	定义一个计算结果
+
+框架 列；
+
+Iframe - 设置高度与宽度     leight width 高 宽
+<iframe src="demo_iframe.htm" width="200" height="200"></iframe>
+
+Iframe - 移除边框 
+<iframe src="demo_iframe.htm" frameborder="0"></iframe>
+
+iframe来显示目标链接页面
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.runoob.com" target="iframe_a" rel="noopener">RUNOOB.COM</a></p>
+
+HTML iframe 标签
+标签	说明
+<iframe>	定义一个内联的ifram
+
+  颜色这
+	#000000	rgb(0,0,0)
+ 	#FF0000	rgb(255,0,0)
+ 	#00FF00	rgb(0,255,0)
+ 	#0000FF	rgb(0,0,255)
+ 	#FFFF00	rgb(255,255,0)
+ 	#00FFFF	rgb(0,255,255)
+ 	#FF00FF	rgb(255,0,255)
+ 	#C0C0C0	rgb(192,192,192)
+ 	#FFFFFF	rgb(255,255,255)
+ 	
+ 	
+ 	                     HTML <script> 标签 列；
+ 	<script>
+document.write("Hello World!");
+</script
+
+                        HTML<noscript> 标签
+<script>
+document.write("Hello World!")
+</script>
+<noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+
+                   JavaScript体验    ---JavaScript事件响应
+<button type="button" onclick="myFunction()">点我！</button>
+
+HTML 脚本标签
+标签	描述
+<script>	定义了客户端脚本
+<noscript>	定义了不支持脚本浏览器输出的文本
+
+字符实体
+如需显示小于号，我们必须这样写：&lt; 或 &#60; 或 &#060;
+音标符	字符	Construct	输出结果
+
+常见的 URL Scheme
+http	超文本传输协议	以 http:// 开头的普通网页。不加密。
+https	安全超文本传输协议	安全网页，加密所有信息交换。
+ftp	文件传输协议	用于将文件下载或上传至网站。
+file	 	您计算机上的文件。
+
+内部样式表
+《head>
+<style type="text/css">
+body {background-color:yellow;}
+p {color:blue;}
+</style>
+</head>
+
+外部样式表
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+标签	描述
+<style>	定义文本样式
+<link>	定义资源引用地址

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            background-color: lightblue;
+        }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: white;
+            padding-bottom: 20px;
+            margin: 10px;
+            height: 100px;
+            overflow: hidden;
+        }
+        .open {
+            height: auto;
+        }
+        .btn {
+            overflow: hidden;
+        }
+        .butOpen, .butClose {
+            width: 28px;
+            height: 28px;
+            border: 1px solid gray;
+            color: gray;
+            text-align: center;
+            line-height: 28px;
+            float: right;
+            margin: 10px;
+        }
+        .butClose {
+            border: 1px solid deepskyblue;
+            color: deepskyblue;
+        }
+        h2 {
+            padding-left: 30px;
+        }
+        p.time {
+            font-size: 14px;
+            color: lightgray;
+            padding-left: 30px;
+        }
+        ul {
+            margin-left: 30px;
+        }
+        span {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card open">
+            <p class="btn">
+                <span class="butOpen">-</span>
+            </p>
+            <h2>任务标题1</h2>
+            <p class="time">2021/08/22 13:00</p>
+            <ul>
+                <li style="font-weight: 900;margin-top: 20px;">任务列表</li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容1</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容2</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容3</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容4</span>
+                </li>
+            </ul>
+        </div>
+        <div class="card">
+            <p class="btn">
+                <span class="butClose">+</span>
+            </p>
+            <h2>任务标题2</h2>
+            <p class="time">2021/08/22 13:00</p>
+            <ul>
+                <li style="font-weight: 900;margin-top: 20px;">任务列表</li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容1</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容2</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容3</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>任务列表内容4</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var btns = document.querySelectorAll(".card .btn span");
+    for (var i=0; i<btns.length; i++) {
+        btns[i].onclick = function() {
+            console.log(this);
+            if (this.className === "butClose") {
+                this.className = "butOpen";
+                this.innerHTML = "-";
+                this.parentNode.parentNode.classList.add("open")
+            } else {
+                this.className = "butClose";
+                this.innerHTML = "+";
+                this.parentNode.parentNode.classList.remove("open")
+            }
+        }
+    }
+
+    var str = "12 sdfg 234 1 s dfv 5 asd f";
+    function getObj(str) {
+        var arr = str.split(" ");
+        var obj = {};
+        arr.forEach(function(word) {
+            var l = word.length += '';
+            if (obj[l]) {
+                obj[l] += 1;
+            } else {
+                obj[l] = 1;
+            }
+        })
+        console.log(obj)
+    }
+</script>
+</html>

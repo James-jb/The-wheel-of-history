@@ -1,0 +1,8 @@
+/* 在css中引入其他的css文件 */
+@import url("second.css");
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}

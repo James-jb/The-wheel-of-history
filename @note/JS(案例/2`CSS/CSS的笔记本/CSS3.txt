@@ -1,0 +1,131 @@
+             @CSS3新增选择器
+1 属性选择器：选择时注意权重问题
+E属性=【att选择器】
+ ^ 开头的，$结尾的
+2 机构伪类选择器：
+E : first-child{第一个孩子}
+E : last-child{最后一个孩子}
+nth-child(数值) {随意选择} even偶数; odd奇数
+n 代表所有 .n+ 表示前几个
+     指定的 E : first-nth/of/-type
+3 伪元素选择器=属于行内元素
+  ：：before前  ：：after    
+   必带 content 
+ 	. clearfix::after{
+	content: ""; 伪元素
+	display: block; 插入的时块
+	height:  0; 不要看见
+	clear: both; 清除浮动
+	visibility: hidden; 不要看见}
+				
+              
+              @css3盒子模型
+	box-sizing: border-box 盒子为width
+（可以让盒子不会变化）
+       
+             #@高级函数
+filter: 函数(5px) 函数大 越模糊;
+ calc：{100%-30px} 盒子计算
+   transition ：属性 时间 运动 开始时间
+
+
+   进度条代码
+ CSS
+ .bar {
+	 width: 150px;
+			height: 15px;
+			border: 1px solid red;
+			border-radius: 7px;
+			padding: 1px;}
+ .bar_in{
+			width: 50%;
+			height: 100%;
+			background-color: #FF0000;
+			transition: all .7s;}
+.bar:hover  .bar_in{
+			width: 100%;}
+HTML
+<div class="bar">
+		<div class="bar_in"></div>
+</div>	
+ 
+ 
+               @2D转换transform（  2D=x y轴移动）
+  1  ：translate移动（可以用%相对自己 与yx ,不会影响其他位置）
+                 对行内无效
+                 
+   2 ：rotate 旋转   deg=度
+  过度：transition: all 0.3s;
+    transform-origin: {left bottom};中心点呀!
+    ：选择中心 origin: x y;（中心转换）！！P361案例！
+      
+   3 ：scale 缩放 
+      不超频 overflow : hidden;
+      过度transform:  all  0.2;  
+          
+               @动画 animation
+      @Keyframes 名称  {
+              0%
+              100%
+       }  来定义的动作
+    animation-duration: 000s 时间
+           - delay 定义开始时间
+   animation-iteration-count:  （infinite; ）无限循环
+   	animation-fill-mode: （forwards;）停止不带
+  	animation-play-state: （paused;） 鼠标进过不动
+  	           #@简写
+  animation: 名称 时间 运动 开始 播放 方向
+  steps=分几步来做
+                
+                @ 3D=xyz
+   transform: translateZ(要接透视 +向眼睛来);
+   transform: matrix3d(x,y,z);xyz 不能省略
+         透视写在父盒子上
+   perspective: (进大远小)  -- deg 度数
+ rotate: 3d;（旋转）左手准则
+   x手指向右   y 手指向下  z手指向
+ transform-style: ;
+ 
+
+
+	2D转换
+	      位置
+			transform: translate(x,y);
+			旋转 deg 
+			transform: rotate(度数);
+			缩放 不影响其他的
+			transform: scale(数字);
+			中心点
+			transform-origin: x,y;
+			
+/* ======================================================= */
+			
+			动画 比 过度更好animation
+			keyframes 定义动画
+	      过度写在本上上: 谁做谁加
+			
+/* 应用动画 */
+			animation-name: 动画名称
+			animation-duration: 运动时间
+			animation-timing-function: ease;运动曲线
+			animation-delay: 开始时间
+			animation-iteration-count: 播放次数 | infinite 是无限
+			animation-direction: alternate ; 反方向
+			animation-fill-mode: forwards; 回来
+			animation-play-state: paused; 暂停
+			animation 是简写
+			
+	/* =========================== */
+			3D转换
+			transform: translate3d(x y z);
+			Z 要透视呀
+			透视=perspective: ;有3D效果
+			
+			
+			png 颜色多
+            浏览器私有前缀
+    -moz-    firefox私有
+    -ms-      ie私有
+  -webkit-   chrome,safari私有
+    -p-         opera私有
+用法; -moz,,,-border-radius: 10px;

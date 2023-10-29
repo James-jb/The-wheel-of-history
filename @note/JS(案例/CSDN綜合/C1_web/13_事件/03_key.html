@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    var d = document.querySelector("div");
+    // window.onkeydown = function(e) {
+        // if (e.keyCode == 37) {
+        //     d.style.left = d.offsetLeft - 5 + 'px';
+        // } else if (e.keyCode == 38) {
+        //     d.style.top = d.offsetTop - 5 + 'px';
+        // } else if (e.keyCode == 39) {
+        //     d.style.left = d.offsetLeft + 5 + 'px';
+        // } else if (e.keyCode == 40) {
+        //     d.style.top = d.offsetTop + 5 + 'px';
+        // }
+    // }
+    // 问题：
+    // 1. 先顿一下
+    // 2. 不流畅
+    // 3. 不支持2个键位同时按下
+
+    // 如果要用键盘控制标签移动，需要用到定时器+状态 
+
+    // 状态
+    var isLeft = false;
+    var isUp = false;
+    var isRight = false;
+    var isDown = false;
+
+    //定时器
+    var timer = null;
+
+    timer = setInterval(function() {
+        if (isLeft) {
+            d.style.left = d.offsetLeft - 5 + 'px';
+        }
+        if (isRight) {
+            d.style.left = d.offsetLeft + 5 + 'px';
+        }
+        if (isUp) {
+            d.style.top = d.offsetTop - 5 + 'px';
+        }
+        if (isDown) {
+            d.style.top = d.offsetTop + 5 + 'px';
+        }
+    }, 30)
+
+    //键盘事件只改变状态
+    window.onkeydown = function(e) {
+        if (e.keyCode == 37) {
+            isLeft = true;
+        } else if (e.keyCode == 38) {
+            isUp = true;
+        } else if (e.keyCode == 39) {
+            isRight = true;
+        } else if (e.keyCode == 40) {
+            isDown = true;
+        }
+    }
+    window.onkeyup = function(e) {
+        if (e.keyCode == 37) {
+            isLeft = false;
+        } else if (e.keyCode == 38) {
+            isUp = false;
+        } else if (e.keyCode == 39) {
+            isRight = false;
+        } else if (e.keyCode == 40) {
+            isDown = false;
+        }
+    }
+</script>
+</html>

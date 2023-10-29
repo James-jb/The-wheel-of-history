@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#pic{
+				display: flex;
+				justify-content: space-around;
+			}
+			#pic img{
+				width: 100px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		点中图片的索引<span id="number"></span>
+		<div id="pic">
+			<img src="./img/1.jpeg" alt="">
+			<img src="./img/1.jpeg" alt="">
+			<img src="./img/1.jpeg" alt="">
+			<img src="./img/1.jpeg" alt="">
+			<img src="./img/1.jpeg" alt="">
+		</div>
+	</body>
+	<script>
+		var vdiv=document.getElementById("pic");
+		var vimg=vdiv.getElementsByTagName("img");
+	
+		for(var i=0;i<vimg.length;i++){
+			vimg[i].setAttribute("index",i);
+			vimg[i].onclick=function(){
+				number.innerHTML=this.getAttribute("index");
+				this.style.border="2px solid red";
+			}
+		}
+	</script>
+</html>

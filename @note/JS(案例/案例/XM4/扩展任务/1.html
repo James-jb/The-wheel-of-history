@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>请输入开始的数字</h2><br>
+		<input id="date" type="text" value=500><br>
+		<button id="reset">准备</button>
+		<button id="start">开始倒数</button>
+		<span id="num">0</span>
+	</body>
+</html>
+<script>
+	var x=0;
+	var t;
+	function reset(){
+		x=document.getElementById("date").value;
+	}
+	function run(){
+		if(x>0){
+			x=x-1;
+			document.getElementById("num").innerHTML=x;
+			t=setTimeout("run()",1);
+		}else{
+			clearTimeout(t);
+		}
+	}
+	
+	document.getElementById("reset").onclick=reset;
+	document.getElementById("start").onclick=run;
+</script>

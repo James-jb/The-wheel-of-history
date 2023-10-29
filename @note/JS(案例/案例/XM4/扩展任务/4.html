@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box img{
+				width: 200px;
+				height: 150px;
+				display: inline-block;
+			}
+			.noshow{
+				display: none;
+			}
+			.item:nth-child(1){
+				background-color: #fff785;
+			}
+			.item:nth-child(2){
+				background-color: #402fff;
+			}
+			.item:nth-child(3){
+				background-color: #0aff6c;
+			}
+		</style>
+		<script>
+		window.onload=function(){
+			var t=0;
+			var run=null;
+			var vbox=document.getElementById('box');
+			var vitem=vbox.getElementsByClassName('item');
+			
+			function showpic(){
+				for(var i =0;i<vitem.length;i++){
+					vitem[i].className='item noshow';
+				}
+				
+				t++;
+				if(t==vitem.length){
+					t=0;
+				}
+				// 显示
+				vitem[t].className='item show';
+			}
+			run=setInterval(showpic,5000);
+		}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="item show">
+				<img src="./4_1.jpg" alt="">
+				树枝满是雪
+			</div>
+			<div class="item noshow">
+				<img src="./4_1.jpg" alt="">
+				雪后的树丛
+			</div>
+			<div class="item noshow">
+				<img src="./4_1.jpg" alt="">
+				雪后的城市
+			</div>
+		</div>
+	</body>
+</html>

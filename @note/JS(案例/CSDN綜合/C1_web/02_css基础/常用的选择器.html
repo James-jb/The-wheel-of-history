@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用的选择器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        h1, p, span {
+            /* 群组选择器  */
+            color: red;
+        }
+        .c {
+            /* class选择器 */
+            color: green;
+        }
+        #big {
+            font-size: 30px;
+            color: blue;
+        }
+        div p {
+            /* 后代选择器  */
+            color: cyan
+        }
+        /* div li p {
+            color: gold;
+        } */
+        div>p {
+            /* 子代：直接子级 */
+            color: pink;
+        }
+
+        /* 属性选择器 */
+        [class] {
+            /* 哪个标签有class */
+            color: skyblue;
+        }
+        [class="yes"] {
+            /* 哪个标签有class */
+            color: gold;
+        }
+        span.ok {
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>123</p>
+    <p class="c">csdn</p>
+    <p class="c" id="big">C1认证</p>
+    <ul>
+        <li>看山是山，看水是水</li>
+        <li class="c">看山不是山，看水不是水</li>
+        <li>看山还是山，看水还是水</li>
+    </ul> -->
+
+    <p>CSDN</p>
+    <h1>Welcome to CSDN</h1>
+    <span>选项1</span>
+    <span class="ok">选项2</span>
+    <span class="yes">选项3</span>
+    <a class="ok" href="">选项5</a>
+    <span>选项4</span>
+    <div>
+        <p>C1认证</p>
+        <ul>
+            <li>
+                <p>网络</p>
+            </li>
+            <li>
+                <p>进制</p>
+            </li>
+            <li>
+                <p>web</p>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>C4认证</p>
+        <img src="" alt="">
+    </div>
+</body>
+</html>
+
+<!-- 一个id名，在同一个html文件中只能出现一次 -->
+
+<!-- 优先级 id(100) > class(10) > tag(1) -->
+
+<!-- 内联样式(1000) -->
+
+
+<!-- A   #ok   100
+B   .yes   10
+C  .nth p a span  13
+D  #no ul li p a  104 -->

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin-left: 100px;
+        }
+        section { 
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section></section>
+    </div>
+</body>
+<script>
+    var d = document.querySelector("div");
+    var sec = document.querySelector("section");
+
+    // 只读属性
+    // offsetLeft  offsetTop  获取标签的左侧 顶部偏移量
+    // offsetWidth  offsetHeight  获取元素的宽度和高度
+
+    d.onclick = function(e) {
+        // e 事件对象 包含了该事件所有的相关信息
+        // console.log("看我一记左勾拳");
+        // console.log(e.clientX, e.clientY)
+        // 获取点击点在标签内部的坐标
+        var x = e.clientX - this.offsetLeft;
+        var y = e.clientY - this.offsetTop;
+        console.log(x, y);
+    }
+    // d.ondblclick = function() {
+    //     console.log("看我二记左勾拳")
+    // }
+    // d.oncontextmenu = function() {
+    //     console.log("再来一记右勾拳")
+    // }
+
+    // d.onmouseover = function() {
+    //     console.log("over")
+    // }
+    // d.onmouseout = function() {
+    //     console.log("out")
+    // }
+    // // over与out在指针进入子级时会进行触发，无特殊要求，我们建议使用enter和leave
+    // d.onmouseenter = function() {
+    //     console.log("enter")
+    // }
+    // d.onmouseleave = function() {
+    //     console.log("leave")
+    // }
+    // d.onmousedown = function() {
+    //     console.log("down");
+    // }
+    // d.onmouseup = function() {
+    //     console.log("up");
+    // }
+    // d.onmousemove = function() {
+    //     console.log("move");
+    // }
+</script>
+</html>

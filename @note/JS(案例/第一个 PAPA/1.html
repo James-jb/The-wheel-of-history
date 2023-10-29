@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title>宴请含</title>
+		<script type="text/javascript">
+			var pages = document.getElementsByClassName('page');
+			var startY, endY, dis = 0;
+			var index = 0;
+
+			document.addEventListener('touchstart', function(e) {
+				var touch = e.touches[0];
+				startY = touch.pageY;
+			})
+			document.addEventListener('touchmove', function(e) {
+				var touch = e.touches[0];
+				endY = touch.pageY;
+				dis = startY - endY;
+			})
+			document.addEventListener('touchend', function(e) {
+				if (Math.abs(dis) > 150) {
+					if (dis > 0) {
+						pageTop(index);
+						qingling();
+					} else {
+						pageDown(index);
+						qingling();
+					}
+				}
+			})
+
+			function pageTop(n) {
+				if (n < pages.length - 1) {
+					n++;
+					index++;
+
+					setTimeout(function() {
+						pages[n - 1].classList.add('hide');
+					}, 1000)
+					pages[n - 1].classList.add('out_top');
+					pages[n - 1].classList.remove('in_top', 'out_down', 'in_down');
+					pages[n].classList.add('in_top');
+					pages[n].classList.remove('out_top', 'out_down', 'in_down');
+					pages[n].style.display = 'block';
+				}
+			}
+
+			function pageDown(n) {
+				if (n > 0) {
+					n--;
+					index--;
+
+					setTimeout(function() {
+						pages[n + 1].classList.add('hide');
+					}, 1000)
+					pages[n + 1].classList.add('out_down');
+					pages[n + 1].classList.remove('in_top', 'out_top', 'in_down');
+					pages[n].classList.add('in_down');
+					pages[n].classList.remove('out_top', 'out_down', 'in_top');
+				}
+			}
+
+			function qingling() {
+				startY = 0;
+				endY = 0;
+				dis = 0;
+			}
+		</script>
+
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			html,
+			body {
+				height: 100%;
+			}
+
+			.show {
+				overflow: hidden;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+			}
+
+			.hide {
+				display: none;
+			}
+
+			.out_top {
+				animation: out_top .5s linear both;
+			}
+
+			.in_top {
+				animation: in_top .5s linear both;
+			}
+
+			.out_down {
+				animation: out_down .5s linear both;
+			}
+
+			.in_down {
+				animation: in_down .5s linear both;
+			}
+
+			/*当前页-->向上翻-->隐藏*/
+			@keyframes out_top {
+				from {
+					transform: translateY(0%);
+				}
+
+				to {
+					transform: translateY(-100%);
+				}
+			}
+
+			/*下一页-->向上翻-->显示*/
+			@keyframes in_top {
+				from {
+					transform: translateY(100%);
+				}
+
+				to {
+					transform: translateY(0%);
+				}
+			}
+
+			/*当前页-->向下拉-->隐藏*/
+			@keyframes out_down {
+				from {
+					transform: translateY(0%);
+				}
+
+				to {
+					transform: translateY(100%);
+				}
+			}
+
+			/*上一页-->向下拉-->显示*/
+			@keyframes in_down {
+				from {
+					transform: translateY(-100%);
+				}
+
+				to {
+					transform: translateY(0%);
+				}
+			}
+		</style>
+
+
+
+		<!-- 字樣部分 -->
+		<style type="text/css">
+			.page {
+				overflow: hidden;
+				position: absolute;
+				display: none;
+
+				width: 100%;
+				height: 100%;
+				font-size: 50px;
+				text-align: center;
+			}
+
+			.page:nth-child(1) {
+				display: block;
+				background-color: #001a55;
+			}
+
+			.page:nth-child(2) {
+				background-color: #001a55;
+			}
+
+			.page:nth-child(3) {
+				background-color: #001a55;
+			}
+
+			.page:nth-child(4) {
+				background-color: #001a55;
+			}
+
+			.page:nth-child(5) {
+				background-color: #001a55;
+			}
+
+			/* ////////////////////////////////////////////////////////// */
+
+			h1 {
+				font-size: 35px;
+				color: #fff;
+				animation: myfirst 2s;
+			}
+
+			h5 {
+				font-size: 9px;
+				color: #706434;
+			}
+
+			h6 {
+				font-size: 20px;
+				color: #706434;
+			}
+
+			h3 {
+				font-size: 35px;
+				color: #FFFFFF;
+			}
+
+			#logo {
+				font-size: 10px;
+				color: #FFFFFF;
+			}
+
+			/* 2--------------- */
+			h2 {
+				font-size: 30px;
+				color: #FFFFFF;
+			}
+
+			p {
+				font-size: 15px;
+				color: #FFFFFF;
+			}
+
+			#yingweng1 {
+				font-size: 15px;
+			}
+
+			/* 3------------------ */
+
+			.dahueilioucheng p {
+				font-size: 30px;
+			}
+
+			#yingweng2 {
+				font-size: 15px;
+			}
+
+			/* 4------------------ */
+			#yingweng3 {
+				font-size: 15px;
+			}
+
+			#dahuequanti {
+				font-size: 20px;
+			}
+
+			/* 5--------------------- */
+			#yingweng4 {
+				font-size: 15px;
+			}
+
+			/* 图片部分 */
+			img {
+				width: 60%;
+				height: 50%;
+			}
+		</style>
+
+
+		<!-- 盒子位置部分 -->
+		<style type="text/css">
+			h1 {
+				margin-top: 50px;
+			}
+
+			#diyigzp {
+				margin-top: 60px;
+				margin-bottom: 60px;
+			}
+
+			#logo {
+				margin-top: 30px;
+			}
+
+			/* 2--------------------- */
+
+			h2 {
+				margin-top: 50px;
+			}
+
+			/* 3--------------------- */
+			.dahueilioucheng p {
+				margin-top: 40px;
+			}
+
+			/* 4--------------------- */
+			.didaing {
+				margin-top: 70px;
+			}
+
+			button {
+				color: black;
+			}
+
+			/* 5--------------------- */
+			.dewug {
+				font-size: 20px;
+				padding-right: 200px;
+				margin-top: 20px;
+			}
+		</style>
+
+		<!-- 引用动画 -->
+		<style type="text/css">
+			.YAOQING {
+				animation-name: czdy;
+				animation-duration: 3s;
+			}
+
+			.logo {
+				animation-name: cydz;
+				animation-duration: 3s;
+			}
+
+			.wengzibufeng {
+				animation-name: cydz;
+				animation-duration: 3s;
+			}
+
+			.dahueilioucheng {
+				animation-name: cydz;
+				animation-duration: 3s;
+			}
+			
+			
+		</style>
+
+		<!-- 所有动画 -->
+		<style type="text/css">
+			@keyframes czdy {
+				0% {
+					transform: translateX(120px);
+				}
+
+				100% {
+					transform: translateX(0px);
+				}
+			}
+
+			@keyframes cydz {
+				0% {
+					transform: translateX(-120px);
+				}
+
+				100% {
+					transform: translateX(0px);
+				}
+			}
+
+			/* 颜色变化 */
+			@keyframes myfirst {
+				from {
+					background: red;
+				}
+
+				to {
+					background: yellow;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="show">
+
+			<!-- 第一個 -->
+			<div class="page A1">
+				<h1>全國時尚芭莎會</h1>
+
+				<h3>--------------------</h3>
+
+				<div class="YAOQING">
+					<div id="diyigzp">
+						<img src="./Z.jpg" >
+					</div>
+
+					<h5>2017年11月15日</h5>
+					<h6>=============</h6>
+					<h5>中國·北京</h5>
+				</div>
+
+				<h3 id="logo">公司logo</h3>
+			</div>
+
+
+			<!-- 第二個 -->
+			<div class="page A2">
+				<h2>大会简介</h2>
+				<h3 id="yingweng1">CONFERENCE INVITED</h3>
+				<h3>--------------------</h3>
+
+				<!-- 圖片部分 -->
+				<div id="diergzp">
+					<img src="./L.png" >
+				</div>
+
+				<div class="wengzibufeng">
+					<p>此处填写大会邀请内容等，可修改</p>
+					<p>此处填写大会邀请内容等，可修改</p>
+					<p>此处填写大会邀请内容等，可修改</p>
+					<p>此处填写大会邀请内容等，可修改</p>
+					<p>此处填写大会邀请内容等，可修改</p>
+				</div>
+
+				<h3 id="logo">公司logo</h3>
+			</div>
+
+
+			<!-- 第三個 -->
+			<div class="page A3">
+				<h2>大会流程</h2>
+				<h3 id="yingweng2">ASSEMBLY PROCESS</h3>
+				<h3>--------------------</h3>
+
+				<div class="dahueilioucheng">
+					<p>9:00-10:00 嘉宾入席</p>
+
+					<p>9:00-10:00 嘉宾入席</p>
+
+					<p>9:00-10:00 嘉宾入席</p>
+
+					<p>9:00-10:00 嘉宾出席</p>
+				</div>
+
+				<h3 id="logo">公司logo</h3>
+			</div>
+
+
+			<!-- 第四個 -->
+			<div class="page A4">
+				<h2>大会地点</h2>
+				<h3 id="yingweng3">CONFERENCE SITE</h3>
+				<h3>--------------------</h3>
+
+				<div class="dashueididiang">
+					<!-- 地點個圖片 -->
+					<div class="disgzp">
+						<img src="./tp.jpeg" >
+					</div>
+
+					<div class="didaing">
+						<h5 id="dhdi">大会地址：北京市东一路888号</h5>
+
+						<h5 id="lxfs">联系方式：8888-9999</h5>
+					</div>
+
+					<button type="button">撥打電話</button>
+
+					<h3 id="dahuequanti">大会全体人员恭候您的光临</h3>
+				</div>
+			</div>
+
+
+			<!-- 第五個 -->
+			<div class="page A5">
+				<h2>线上报名</h2>
+				<h3 id="yingweng4">ONLINE REGISTRATION</h3>
+				<h3>--------------------</h3>
+
+				<div class="xiangshangbaoming">
+
+					<form>
+
+						<p class="dewug">姓名</p>
+						<input type="text" value="">
+
+						<p class="dewug">联系方式</p>
+						<input type="text" value="">
+
+						<p class="dewug">备注</p>
+						<input type="text" value="">
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+</html>

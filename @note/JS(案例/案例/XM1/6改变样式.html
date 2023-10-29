@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#txt{
+				width: 100px;
+				background-color: #aaff00;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="txt">鼠标移入移出 改变颜色</div>
+		<script>
+			document.getElementById("txt").onmouseover = function(){
+				document.getElementById("txt").style.color="red";
+				document.getElementById("txt").style.backgroundColor="aqua";
+				
+				// document.getElementById("txt").style.fontSize="50px";
+			};
+			document.getElementById("txt").onmouseout = function(){
+				document.getElementById("txt").style.color="black";
+				document.getElementById("txt").style.backgroundColor=" #aaff00";
+				
+				// document.getElementById("txt").style.fontSize="20px";
+			};
+		</script>
+	</body>
+</html>

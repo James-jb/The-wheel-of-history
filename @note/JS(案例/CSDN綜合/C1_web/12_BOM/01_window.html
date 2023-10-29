@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+</head>
+<body>
+    <!-- <a href="index.html">index</a> -->
+    <button onclick="openIndex()">打开</button>
+</body>
+<script>
+    // window是浏览器留给js的大入口
+    // 全局变量是window的属性
+    // 全局函数是window的方法
+    // var cege = "策哥";
+    // console.log(cege);
+    // console.log(window);
+
+    // 1. 获取浏览器左上角到屏幕左上角的距离
+    document.write(window.screenX + " ", window.screenY)
+    // 2. 窗口大小
+    console.log(window.innerWidth + "," + window.innerHeight)
+    console.log(window.outerWidth + "," + window.outerHeight)
+
+    // 3. 打开关闭窗口
+    function openIndex() {
+        window.open("index.html","_blank","width=300,height=300");
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			span{
+				display: inline-block;
+				margin: 2px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="set99()">显示99表</button>
+		<button onclick="setinit()">清屏</button>
+	</body>
+	<script>
+	function set99(){
+		document.write("<button onclick='set99()'>显示99表</button>");
+		document.write("<button onclick='setinit()'>清屏</button>");
+		document.write("<br>");
+		
+		for(var i=1;i<=9;i++){
+			for(var j=1;j<=i;j++){
+				document.write("<span style='margin: 10px;'>"+i+ "X" +j+ "=" +i*j+"</span>");
+			}
+			document.write("<br>");
+		}
+	}
+	
+	function setinit(){
+	window.location.reload();
+	}
+	</script>
+</html>

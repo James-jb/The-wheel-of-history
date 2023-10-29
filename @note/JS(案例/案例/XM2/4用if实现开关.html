@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#onoff{
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+				cursor: pointer;
+				background-color: #cc0;
+			}
+			.on{
+				background-color: #cc0;
+				color: #f00;
+				
+				box-shadow: 10px 10px 5px #888;
+			}
+			.off{
+				background-color: #ccc;
+				color: #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="onoff" onclick="run(this)">
+			开
+		</div>
+	</body>
+	<script>
+		onoff.innerHTML="开";
+		onoff.className="on";
+		
+		function run(x){
+			if(x.innerHTML=="开"){
+				x.innerHTML="关";
+				x.className="off";
+			}else{
+				x.innerHTML="开";
+				x.className="on";
+			}
+			
+		}
+	</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css的引入方式</title>
+    <!-- 外部样式表 -->
+    <!-- <link rel="stylesheet" href="css/first.css"> -->
+    <style>
+        /* 引入其他的css样式 */
+        @import url("css/second.css");
+        /* 内部样式表 */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="css/first.css"> -->
+</head>
+<body>
+    <div></div>
+    <p>C1的css部分 </p>
+    <!-- 内联样式表  -->
+    <div style="width:200px;background-color: cyan"></div>
+</body>
+</html>
+
+<!-- 内部样式表与外部样式表取决于哪个后引入
+内联样式表的优先级是最高的 -->

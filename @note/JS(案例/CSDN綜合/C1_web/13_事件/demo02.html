@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖拽</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-image: url("img/xhr.jpeg");
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    var div = document.querySelector("div");
+    // 1. 鼠标按下后，移动div
+    div.onmousedown = function(e) {
+        var l1 = this.offsetLeft;
+        var t1 = this.offsetTop;
+        var x1 = e.clientX;
+        var y1 = e.clientY;
+        // 鼠标移动
+        window.onmousemove = function(e2) {
+            var x2 = e2.clientX;
+            var y2 = e2.clientY;
+            var l2 = l1 + (x2-x1);
+            var t2 = t1 + (y2-y1);
+            div.style.left = l2 + 'px';
+            div.style.top = t2 + 'px';
+        }
+    }
+    // 2. 鼠标抬起后，不能移动div
+    div.onmouseup = function() {
+        window.onmousemove = null;
+    }
+</script>
+</html>

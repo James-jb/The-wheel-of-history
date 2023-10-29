@@ -1,0 +1,58 @@
+========================表格
+<table border="0" cellspacing="表格单元格间距设置"
+                       cellpadding="表格单元边沿与单元内容之间的间距设置" 
+         align="文字方向">
+
+thead 是头    |    tboody 是身体
+tr 行             |   td 单元格 
+                @合并
+colspan是行  |  rowspan是列
+
+========================列表
+              @无序列表
+      ul>li*4 是一键生成
+      <ul>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+      </ul>
+
+              @有序列表
+      ol>li*4 一键生成
+      <ol>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+      </ol>
+
+              @自定义列表
+      <dl>
+         <dt>名称</dt>
+         <!-- 下列是解释  dt 与 dd是一起的-->
+         <dd></dd>
+         <dd></dd>
+         <dd></dd>
+      </dl>
+========================表单
+<input type="text" name="" id="" value="内部文字" />
+     tyep = "text "
+      type ="password"
+       type = "radio"
+        type = "checkbox"
+     
+              @属性
+     name = "是名字"  |  value = "内部文字"
+      checked = "是默认选择" | maxlength = "默认选择"
+        
+              @下拉菜单
+   <select name="">
+         <option value="">选项1</option>
+         <option value="">选项2</option>
+         <option value="">选项3</option>
+         <option value="">选项4</option>
+    </select>
+
+              @文本域
+ <textarea rows="" cols="">

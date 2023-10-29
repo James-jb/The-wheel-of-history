@@ -1,0 +1,29 @@
+         @带有语义化的标签
+<header>头部</header>
+<nav>导航</nav>
+
+<article>内容</article>
+<section>文档</section>
+<aside>侧边栏</aside>
+
+<footer>尾部</footer>
+
+          @多媒体
+<video src="视频地址"></video>
+<!-- mp4 webm ogg -->
+autoplay 自动播放
+muted    禁言播放
+controls 显示控件
+loop     循环播放
+poster   带加载
+
+#<audio src="音频地址" >浏览器都支持MP3
+
+         @input表单·
+  类型<input ytpe=
+ ["email"/"url"/"date"/time/tel/search/color/number]>
+  表单属性:
+   <placeholder>提示信息
+  <required>提示不能为空
+  <autofocus>自动聚焦
+  

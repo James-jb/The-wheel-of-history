@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var i = 0;
+			function Myfunction(){
+				i=Math.random()*100;
+				console.log(i);
+				//输出变量i
+				
+				i=parseInt(i);
+				console.log(i);
+				//输出i的值
+				
+				document.getElementById("result").innerHTML=i;
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="Myfunction()">随机生成数字0-100</button>
+		<h2 id="result"></h2>
+	</body>
+</html>

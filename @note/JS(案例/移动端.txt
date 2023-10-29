@@ -1,0 +1,191 @@
+direction：设置swiper滑动方向，vertical是垂直滑动，
+默认是horizontal（水平滑动）。
+
+spaceBetween：设置slides之间的间隔距离。
+
+autoplay：设置slide是否自动滑动（用于轮播）
+
+slidesPerView：设置slider容器能够同时显示的slides数量(carousel模式)。
+可以设置为number或者 ‘auto’则自动根据slides的宽度来设定数量。
+
+————————————————
+
+动画简写属性:名称,时间,运动曲线,开始,次数,是否方向,结束状态
+运动曲线:linear = 匀速
+
+
+		1基本
+		PPL = 像素
+		pt与像素有比例关系
+		设备独立像素
+		IOS 叫 PT
+		Android 叫 DP
+		物理像素:是屏幕的最小单位
+
+		真机调试
+		三方软件: Ghostlab weinre
+
+		2视口-viewpot
+		可以设置 % 呀
+		
+		3相应试
+
+
+====================================================
+====================================================
+
+====================================================
+
+   两个软件：1.RP摹客 2.Gitee 3 Bootstarp 
+小小知识点：cutterman是ps中的导出插件
+   		 1用750px为准 
+		 2屏幕尺寸/分数 
+		 3页面元素rem=750/
+		 
+      @移动端P390 -527
+  主要 ipone6/7/8 
+  
+       @视口 -- viewport 
+  布局视口: =980px为主 
+  视觉视口: =X轴为主 
+  理想视口: =完美的 
+
+ <meta name="viewport" content="width=device-width, user-scalable=no,  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">@重点 
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">   ？？？
+ 
+  iphone8  1px开发像素=2个物理像素（视网模型 使用2倍图可以防止模糊）
+  
+      @背景尺寸（让图片变大小）
+  box-sizing: border-box   (改变盒子不变)     
+  ---------------
+   background-size:  0px;  (也可以，缩放问题)
+   --contain(就是谁先到底)  --cover(宽·高填满);
+   --linear-gradient 渐变背景（要添加私有前缀）
+
+ @高级网页设置
+  1点击亮度需要清楚 设置为 transparen 完成透明---a
+   -webkit-tap-highlight-color: transparent;
+  2在IOS可以加自定义样式上---img
+   -webkit-touch-callout: none
+   3长期按不会进入---懂
+	img,a{ -webkit-touch-callout: none;
+		
+		@两种方案呀 
+     1单独的网页 2相应式网页（手机加上 m. ）
+   一共4+2
+         
+
+		1@流式布局
+ 用分比例%来决定
+		
+		2@flex布局 (伸缩布局,自适应效果| 通过父盒子，来控制子盒子）
+加在父---   
+              --display: flex; 添加flex呀  
+		1flex-direction:  (主轴方向) 
+		row /row-reverse从左到右(反正), column 从Y轴开始;       
+			
+		2justify-content: (主轴上的 排列方式)
+		tart center end|
+		space-around;        平分剩余部分
+	        space-between;      先两边贴边.再分配
+	          
+	 *3flex-wrap:  nowrap  (不换行);
+			                 /wrap 自动换行 (装不开会缩小)
+			
+	 4align-content: （同侧轴，y轴对称）
+			 
+	5align-items: （ y轴对称 排列方式）
+start eng center stretch拉升; align-self 自己对齐  order自己对齐
+   
+	6flex-flow: =column wrap（复合属性;）
+	子    flex 平分剩余空间   align-self侧轴布局  order  排列顺序
+	        
+加在子---
+                flex: 分数(可以是数字);
+                  align-self: flex-end; (让盒子下来)
+                  order:数字大小       
+                
+                
+
+		@3 less+rem+媒体查询布局
+   em于父元素 成多少倍 |rem 相对字体大小来说
+   
+           重点：
+  nedua Query=媒体查询（对设备有大小用）
+用[ @media mediatype是设备 如“all , screen...  列如：all所有 screen是移动端  and | not | only
+   引入资源，就是
+  <link rel="stylesheet" type="text/css" href="css地址"  media="screen and (min/max)">
+
+        @less是预处理
+		 less:新的写法:  标签 {@变量名： 值；}
+		 
+		 rem+媒体查询+less 技术
+	公式：rem=页面元素 px ( 屏幕宽度/划分分数)	 
+		 
+
+
+		@4 混合布局=都要
+  
+  
+  相应式-----------
+       @ 1 媒体查询--同上
+ @media screen and (max-width: 767px)
+      ---  超小  <768px
+       --- 平板  >=768px ~ <992px
+       
+       @ 2 bootstarp 来自 Twitter 
+   官网地址: getbootstrap.com
+   
+    container-fluid 和屏幕一样宽
+	container 有一点边距
+
+        删格系统
+	分数=12要呀
+	    .col-xs-分数 （超小）
+	 	.col-sm- （平板）
+	 	.col-md- （显示屏）
+	 	.col-lg-
+	 	
+--------------------------下面不太懂
+	    列嵌套
+就是加一个 盒子+行
+	
+	    列偏移
+.col-md-offset- *类
+	
+	    列排序
+ 	
+=====================================================
+==========================================================
+==============================================================
+                 
+                 JS  	
+    touch + start / move / end 
+               摸        移动      离开
+               
+    列：<script type="text/javascript" charset="utf-8">
+			var .addEventListener('touchmove', function(){
+				console.log('模你')                         }
+    
+    Touches                 是所有手指 
+	targetTouches      是当时摸DOW 元素的手指---是所有元素的的坐标
+	changed Touches 是手指状态改变--从无到有           
+        
+    #来实现拖动 元素
+          touch start      获取手指初始坐标,
+          touch move    计算手指的距离,并且移动盒子
+		  touch end       离开
+  prevent Default (  )  ---  阻止屏幕滚动
+                
+              @click = 300ms 延迟
+ 	方法： initial-scale = 1.0    不让他缩放就行
+=====================================================
+
+ 	               @jQuery = js库  |必须学
+ 	1调用jQuery
+<script type="text/javascript" 
+src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js">
+ </script>
+ 	
+ 	
+ 	

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新年倒计时</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        .bg {
+            height: 100%;
+            background-image: url(http://api.btstu.cn/sjbz/?lx=meizi);
+            background-size: cover;
+            background-position: center center;
+        }
+        .shadow {
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            overflow: hidden;
+        }
+        p {
+            height: 40px;
+            line-height: 40px;
+            font-size: 36px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="shadow">
+            <p style="margin-top: 250px;">新年倒计时</p>
+            <p style="margin-top: 30px;">
+                <span id="day">0</span>天
+                <span id="hour">0</span>小时
+                <span id="minute">0</span>分钟
+                <span id="second">0</span>秒
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    //获取全局变量
+    var spanDay = document.getElementById("day");
+    var spanHour = document.getElementById("hour");
+    var spanMinute = document.getElementById("minute");
+    var spanSecond = document.getElementById("second");
+    var timer = null;
+
+    timer = setInterval(function() {
+        var date1 = new Date();
+        var date2 = new Date("2022-01-01 00:00:00");
+        var n = date2.getTime() - date1.getTime(); //毫秒
+        n /= 1000; //秒
+        // 天
+        var day = n / (60*60*24);
+        spanDay.innerHTML = parseInt(day);
+        // 小时
+        n %= (60*60*24);  // 不足一天的秒数
+        var hour = n / (60*60);
+        spanHour.innerHTML = parseInt(hour);
+        //分钟
+        n %= (60*60);  //不足一小时的秒数
+        var minute = n / 60;
+        spanMinute.innerHTML = parseInt(minute);
+
+        //秒
+        var second = n % 60;
+        spanSecond.innerHTML = parseInt(second);
+    }, 1000);
+</script>
+</html>

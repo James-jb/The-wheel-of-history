@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图</title>
+    <style>
+        img {
+            width: 300px;
+        }
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            background-image: url(img/cat.jpeg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/cat.jpeg" alt="">
+    <div>
+        <p>这是一只橘猫</p>
+    </div>
+</body>
+</html>
+
+<!-- background-size: w h;
+w 宽度 h 高度
+如果只给其中一个，另一边会等比例变化
+两个特殊的值：
+contain  图片的长边占满父级
+cover 图片的短边占满父级 -->

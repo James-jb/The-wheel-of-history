@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .ok {
+            color:  red;
+        }
+        .yes {
+            font-size: 36px;
+        }
+        .no {
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="wrap">
+        <p id="zy" class="ok">赵云</p>
+        <p id="dw">典韦</p>
+        <p id="mc">马超</p>
+    </div> -->
+
+    <ul>
+        <li>两个黄鹂鸣翠柳</li>
+        <li class="ok yes">一行白鹭上青天</li>
+        <li>窗含西岭千秋雪</li>
+        <li>门泊东吴万里船</li>
+    </ul>
+</body>
+<script>
+
+    var dWrap = document.getElementById("wrap");
+
+    // 1. 增加
+    // var p1 = document.createElement("p");
+    // p1.innerHTML = "诸葛亮";
+    // // 将p1放在指定位置
+    // dWrap.appendChild(p1);
+
+    // var arr = ["诸葛亮","司马懿","郭嘉"];
+    // for (var i=0; i<arr.length; i++) {
+    //     var p = document.createElement("p");
+    //     p.innerHTML = arr[i];
+    //     dWrap.appendChild(p);
+    // }
+
+    // 获取诸葛亮的p标签
+    // var pZhuge = document.getElementsByTagName("p")[0];
+    // pZhuge.setAttribute("id","zg");
+    // pZhuge.setAttribute("class","ok");
+    // pZhuge.id = "zg";
+    // pZhuge.className = "ok";
+
+    // pZhuge.myname = "cege";
+    // 通过setAttribute设置的自定义属性通过点语法是不能调用的
+    // pZhuge.setAttribute("myname","cege");
+    // console.log(pZhuge);
+    // console.log(pZhuge.getAttribute("myname"))
+
+    // var p = document.createElement("p");
+    // p.innerHTML = "荀彧";
+    // dWrap.insertBefore(p, pZhuge);
+
+    // var d = dWrap.cloneNode(false);
+    // console.log(d);
+
+    // 2. 删除
+    // var dDw = document.getElementById("dw");
+    // // 删
+    // dWrap.removeChild(dDw);
+
+    // //删除属性节点 
+    // var dZy = document.getElementById("zy");
+    // // 获取属性节点
+    // var c = dZy.getAttributeNode("class");
+    // //删除属性节点
+    // dZy.removeAttributeNode(c);
+
+    // 3. 修改
+    // var dDw = document.getElementById("dw");
+    // var p = document.createElement("p");
+    // p.innerHTML = "关羽";
+    // dWrap.replaceChild(p, dDw);
+
+
+    // 4. 查找
+    // ES6新方法
+    // var dWrap2 = document.querySelector("#wrap");
+    // var dDw = document.querySelector("#wrap p:nth-of-type(2)");
+    // var dDw = document.querySelectorAll("p")[1];
+    // console.log(dDw)
+
+    // var ul = document.querySelector("ul");
+    // ul.firstElementChild.style.color = "yellow";
+    // ul.lastElementChild.style.color = "cyan";
+
+    // var li1 = document.querySelectorAll("li")[0];
+    
+    // var li2 = li1.nextElementSibling;
+    // 兼容写法
+    // var li2 = li1.nextSibling.nodeType === 1 ? li1.nextSibling : li1.nextElementSibling;
+    // console.log(li2);
+    // li2.style.color = "red";
+    // li2.className = "ok yes";
+
+    // console.log(li2.parentNode)
+
+
+    // 获取所有子节点
+    // var lis = ul.children   推荐
+    // var lis = ul.childNodes;
+    // console.log(lis);
+
+    // 操作
+    var li2 = document.querySelector("ul li:nth-of-type(2)");
+    // li2.classList.add("no");
+    // li2.classList.remove("yes");
+    // li2.classList.replace("yes", "no");
+    // console.log(li2.classList.contains("ok"))
+    li2.classList.toggle("no", false);
+    li2.classList.toggle("no", false);
+</script>
+</html>

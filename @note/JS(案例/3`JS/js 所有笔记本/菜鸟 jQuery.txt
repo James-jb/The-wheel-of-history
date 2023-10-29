@@ -1,0 +1,103 @@
+              @学习的
+   1 选择器
+2 样式操作
+3 效果
+4 属性操作
+5 文本属性值
+6 元素操作 -需要转行   ？？？
+   $("div").each(function(){})
+7 尺寸 位置 = 设置文档的
+
+
+
+              @1选择器
+  以美元符号开头：$()。
+  	$(function(){
+		//此处是COM 加载完成入口
+	})
+
+             @  $   是 jquery 的顶级对象
+	          $ = jquery
+	          @js 和 js 的转换
+1	 DOM 变 js
+	   $('video');
+	   $( 直接加 )
+2	 js 变 DOM
+	   $('video')[0].play()
+	   $('video').get(0).play()  
+	          
+	          @选择器
+	层级选择器：
+	  子   $ ( " ul > li" )
+	  后   $ ( " ul li " )
+	 
+	          @隐使迭代
+	$ ( "     " ).css ( " background ", "pink ");
+	          
+    @事件 -- 页面对不同访问者的响应叫做事件
+         常见 DOM 事件：
+鼠标事件	键盘事件	表单事件	文档/窗口事件
+click     	     keypress	  submit	   load
+dblclick          keydown	  change	   resize
+mouseenter	  keyup	      focus    	   scroll
+mouseleave	  blur	     unload
+hover	
+    列：
+  $("p").click(function(){
+    // 动作触发后执行的代码!!
+     });
+     
+              @排他思想 （排除他人，选择自己）+ 隐士迭代
+     jquery 元素前 $(this).index()
+	     show(显示)
+	      hide(隐藏)
+	
+	          @链式编程-把两变一
+	$(this).css('color', "") .siblings().hide();
+             
+              @CSS 使用
+	属性名
+		$(this).css("color");
+    属性名,值,逗号
+		$(this).css("color", "red");
+    参数
+		$(this).css({"color": "white", "font-size":"20px"})
+		
+	          @2设置类样式
+	// 添加 addClass()
+	$("div").click(function(){
+		$
+	}
+    // 删除 removeClass()
+	$("div").click()
+	 // 切换 toggleClass()
+	$("dic").toggleClass()
+
+================================
+            @3效果 ([speed], [easing], [fn]) 
+@	show显示  
+	 speed影藏 =  slow narmal or fast 
+	  toggle切换 = 
+@滑动
+		slideDown()下滑
+			slideUp()上滑
+			    slideToggle()切换
+		 切换hover([over,] out) 
+		动画停止 - 写在动画前面
+		stop()
+@淡入淡出
+      fadeIn 淡入
+	  fadeout 淡出
+	  fadeToggle
+		fn 修改透明度	opacity 	
+@动画
+     animate (params, [speed], [easing], [fn])
+		 
+    @4获取属性值
+        prop("属性")
+	     prop("属性"  "属性值")change 发生改变
+		    index 
+
+
+
+	  

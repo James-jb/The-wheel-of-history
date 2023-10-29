@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		.pic{
+			width: 220px;
+			height: 220px;
+			margin: 30px;
+			padding: 10px;
+			text-align: center;
+			background-color: #0cc;
+			box-shadow: 3px 3px 3px #888;
+			display: inline-block;
+		}
+		.pic img{
+			width: 200px;
+		}
+	</style>
+	<body>
+		<button onclick="ttf()">旋转角度</button>
+		<button onclick="tf()">还原</button>
+		<br>
+		
+		<div class="pic">
+			<img src="./img/1.jpeg" alt="">
+			<p>
+				作者：王安石<br>
+				12345 <br>
+				56789
+			</p>
+		</div>
+		
+		<div class="pic">
+			<img src="./img/1.jpeg" alt="">
+			<p>
+				作者：王安石<br>
+				12345 <br>
+				56789
+			</p>
+		</div>
+		<script>
+			var vdiv=document.getElementsByClassName("pic");
+			function ttf(){
+				vdiv[0].style.transform="rotate(10deg)";
+				vdiv[1].style.transform="rotate(20deg)"
+			}
+			function tf(){
+				vdiv[0].style.transform="rotate(0deg)"
+				vdiv[1].style.transform="rotate(0deg)"
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button"  value="《登鹳雀楼》"  onclick="openwin1()"/>
+		<input type="button"  value="《寻隐者不遇》"  onclick="openwin2()"/>
+	</body>
+</html>
+<script type="text/javascript">
+	function openwin1(){
+		win=window.open('','win1','widtn=250,height=300');
+		win.document.write("<h2 style='color: red;'>《登鹳雀楼》</h2>");
+		win.document.write("<p>白日依山尽，黄河入海流。</p>");
+		win.document.write("<p>欲穷千里目，更上一层楼。</p>");
+		win.document.write("<title>《登鹳雀楼》</title>");
+	}
+	function openwin2()
+	{
+		win=window.open('index2.html','win1','widtn=250,height=300');
+	}
+</script>

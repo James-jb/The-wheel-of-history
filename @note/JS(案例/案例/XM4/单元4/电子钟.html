@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#time{
+				width: 200px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				border: #FF0000 solid 2px;
+				border-radius: 30px;
+				box-shadow: 0 0 20px #FF0000;
+			}
+			span{
+				font-size: 25px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="time">
+			<span></span>时
+			<span></span>分
+			<span></span>秒
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function run()
+	{
+		var shijian=document.getElementById("time");
+		var x=shijian.getElementsByTagName("span");
+		var date=new Date();
+		// shijian.innerHTML=date;
+		var h,m,s;
+		h=date.getHours();
+		if(h<10) h='0'+h;
+		m=date.getMinutes();
+		if(m<10) m='0'+m;
+		s=date.getSeconds();
+		if(s<10) s='0'+s;
+		x[0].innerHTML=h;
+		x[1].innerHTML=m;
+		x[2].innerHTML=s;
+		setTimeout(run,1000);
+	}
+	run();
+</script>

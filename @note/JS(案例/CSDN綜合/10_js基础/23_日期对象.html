@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期对象</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Date()
+    // var date = new Date(); //获取当前的时间戳
+    // console.log(date);
+    var date = new Date("2022-1-1 00:00:00");
+    console.log(date.getFullYear());
+    console.log(date.getMonth());  //[0,11]
+    console.log(date.getDate());
+    console.log(date.getDay());  //星期几
+
+    console.log(date.getHours())
+    console.log(date.getMinutes())
+    console.log(date.getSeconds())
+    // 获取距离1970.1.1的毫秒数
+    console.log(date.getTime());
+</script>
+</html>

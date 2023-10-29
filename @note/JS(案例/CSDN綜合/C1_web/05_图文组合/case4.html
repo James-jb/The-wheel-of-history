@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        section {
+            width: 400px;
+            overflow: hidden;
+        }
+        .item {
+            width: 180px;
+            height: 173px;
+            float: left;
+            margin: 10px;
+        }
+        .item .pic {
+            height: 101px;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+        .item .pic p {
+            color: white;
+            font-size: 14px;
+            height: 21px;
+            line-height: 21px;
+            margin-top: 80px;
+            margin-right: 5px;
+            text-align: right;
+        }
+        .item .title {
+            font-size: 18px;
+            height: 40px;
+            line-height: 40px;
+            /* 以下三行会让文本出现省略号 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .item .bottom {
+            overflow: hidden;
+        }
+        .item .bottom span {
+            float: left;
+            width: 50%;
+            height: 30px;
+            line-height: 30px;
+        }
+        .item .bottom .money {
+            font-size: 16px;
+            color: #ff6050;
+        }
+        .item .bottom .looks {
+            text-align: right;
+            font-size: 14px;
+            color: #a5a7b4;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="item">
+            <div class="pic" style="background-image: url(img/img4/1.png);">
+                <p>共12节</p>
+            </div>
+            <p class="title">使用爬虫和Flask建设什么什么社你们</p>
+            <p class="bottom">
+                <span class="money">￥99.0</span>
+                <span class="looks">2184观看</span>
+            </p>
+        </div>
+        <div class="item">
+            <div class="pic" style="background-image: url(img/img4/2.jpg);">
+                <p>共12节</p>
+            </div>
+            <p class="title">使用爬虫和Flask建设什么什么社你们</p>
+            <p class="bottom">
+                <span class="money">￥29.0</span>
+                <span class="looks">2184观看</span>
+            </p>
+        </div>
+        <div class="item">
+            <div class="pic" style="background-image: url(img/img4/3.jpg);">
+                <p>共12节</p>
+            </div>
+            <p class="title">使用爬虫和Flask建设什么什么社你们</p>
+            <p class="bottom">
+                <span class="money">￥29.0</span>
+                <span class="looks">2184观看</span>
+            </p>
+        </div>
+        <div class="item">
+            <div class="pic" style="background-image: url(img/img4/4.jpg);">
+                <p>共12节</p>
+            </div>
+            <p class="title">使用爬虫和Flask建设什么什么社你们</p>
+            <p class="bottom">
+                <span class="money">￥129.0</span>
+                <span class="looks">2184观看</span>
+            </p>
+        </div>
+    </section>
+</body>
+</html>

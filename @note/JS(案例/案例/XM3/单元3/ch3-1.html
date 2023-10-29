@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#mike{
+				position: absolute;
+				width: 6.25rem;
+				height: 100px;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="./img/1..jpeg" id="mike" >
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		var vmike=document.getElementById("mike");
+		document.onkeydown=function(e){
+			e=e||window.event;
+			switch(e.keyCode)
+			{
+				case 37:vmike.style.left=vmike.offsetLeft-2+"px";
+						vmike.style.transform="scaleX(-1)";
+						break;
+				case 39:vmike.style.left=vmike.offsetLeft+2+"px";
+						vmike.style.transform="scaleX(1)";
+						break;
+			}
+		}
+	}
+</script>

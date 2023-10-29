@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSDN Register</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        h1 {
+            display: none;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+        }
+        input {
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            text-indent: 10px;
+        }
+        .wrap {
+            min-width: 1400px;
+        }
+        nav {
+            height: 46px;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        nav>div {
+            height: 46px;
+        }
+        nav .left {
+            width: 540px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        nav .left a, nav .right a {
+            float: left;
+            height: 46px;
+            line-height: 46px;
+            font-size: 14px;
+            margin-left: 15px;
+            color: black;
+            padding: 0 4px;
+        }
+        nav .left a:hover {
+            background-color: #ccc;
+        }
+        nav .left a:first-child:hover {
+            background-color: #fff;
+        }
+        nav .left a img {
+            margin-top: 3px;
+            height: 40px;
+        }
+
+        nav .center {
+            margin: 0 410px 0 550px;
+            background-color: #f5f6f7;
+            height: 32px;
+            border: 1px solid #ebebef;
+            margin-top: 6px;
+            overflow: hidden;
+            border-radius: 17px;
+        }
+        nav .center input {
+            width: 84%;
+            height: 32px;
+            float: left;
+        }
+        nav .center button {
+            width: 15%;
+            height: 100%;
+            background-color: #ff4d4d;
+            color: white;
+            border: 0;
+            float: right;
+        }
+        nav .right {
+            width: 400px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        nav .right a, nav .right p {
+            float: right;
+            margin: 0 10px 0 0;
+        }
+        nav .right p a, nav .right p span {
+            height: 46px;
+            line-height: 46px;
+            float: left;
+            margin: 0;
+        }
+        nav .right>a:first-child {
+            margin-top: 7px;
+            height: 32px;
+            line-height: 32px;
+            width: 92px;
+            text-align: center;
+            color: white;
+            border-radius: 2px;
+            background-color: #ff4d4d;
+        }
+
+        .content {
+            height: 614px;
+            background-color: tomato;
+            background-image: url(img/bg.jpg);
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+        }
+        .content .center {
+            width: 770px;
+            height: 490px;
+            margin: 62px auto;
+        }
+        .content .center .left {
+            width: 330px;
+            height: 100%;
+            float: left;
+            background-color: rgba(0,0,0,.3);
+        }
+        .content .center .right {
+            width: 440px;
+            height: 490px;
+            background-color: #fff;
+            float: left;
+        }
+        .content .center .right .choose {
+            height: 26px;
+            width: 246px;
+            margin: 70px auto 22px;
+            border-bottom: 1px solid lightgray;
+        }
+        .content .center .right .choose p {
+            width: 119px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            float: left;
+            text-align: center;
+            margin: 0 2px;
+        }
+        .content .center .right .choose p:first-child {
+            border-bottom: 1px solid #ff6864;
+        }
+        .content .center .right>div {
+            width: 246px;
+            margin: 0 auto;
+            height: 28px;
+            border: 1px solid lightgray;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .content .center .right>div input {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .content .center .right .forget {
+            width: 246px;
+            margin: 0 auto;
+            text-align: right;
+            margin-top: 14px;
+            margin-bottom: 34px;
+        }
+        .content .center .right .forget a {
+            font-size: 14px;
+            color: black;
+        }
+        .content .center .right .login {
+            width: 246px;
+            height: 36px;
+            line-height: 36px;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #f5f5f5;
+            color: #dadada;
+            margin-bottom: 118px;
+        }
+        .content .center .right .more {
+            height: 24px;
+            text-align: center;
+        }
+        .content .center .right .more a, .content .center .right .more span {
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            vertical-align: top;
+            color: #43a0e8;
+        }
+        .content .center .right .more span {
+            color: #eee
+        }
+        .content .center .right .more img {
+            height: 24px;
+        }
+        .content .center .right .role {
+            font-size: 14px;
+            color: lightgray;
+            text-align: right;
+            width: 400px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSDN</h1>
+    <div class="wrap">
+        <nav>
+            <div class="left">
+                <a class="logo" href="###">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <a href="###">首页</a>
+                <a href="###">博客</a>
+                <a href="###">专栏课程</a>
+                <a href="###">下载</a>
+                <a href="###">问答</a>
+                <a href="###">社区</a>
+                <a href="###">插件</a>
+                <a href="###">认证</a>
+            </div>
+            <div class="center">
+                <input type="text" placeholder="请输入查询的内容">
+                <button>搜索</button>
+            </div>
+            <div class="right">
+                <a href="###">创作中心</a>
+                <a href="###">消息</a>
+                <a href="###">收藏</a>
+                <a href="###">会员中心</a>
+                <p>
+                    <a href="###">登录</a>
+                    <span>/</span>
+                    <a href="###">注册</a>
+                </p>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="center">
+                <div class="left">
+                    <h2>机器人的诞生</h2>
+                </div>
+                <div class="right">
+                    <div class="choose">
+                        <p>账号密码登录</p>
+                        <p>手机免密登录</p>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="手机号/邮箱/用户名">
+                    </div>
+                    <div style="margin-top: 14px;">
+                        <input type="password" placeholder="密码">
+                    </div>
+                    <p class="forget">
+                        <a href="###">忘记密码</a>
+                    </p>
+                    <a class="login" href="">登录</a>
+                    <p class="more">
+                        <a href="###">微信注册登录</a>
+                        <span>|</span>
+                        <a href="###">CSDN App扫码</a>
+                        <span>|</span>
+                        <img src="img/icons.png" alt="">
+                    </p>
+                    <p class="role">服务条款</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

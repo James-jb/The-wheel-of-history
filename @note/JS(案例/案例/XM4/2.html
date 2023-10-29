@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width: 300px;
+				height: 200px;
+				line-height: 200px;
+				text-align: center;
+				
+				border-radius: 20px;
+				box-shadow: 0 0 10px #f00;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"> ? </div>
+	</body>
+</html>
+<script>
+var timer=document.getElementById('box');
+	function showtime(){
+		var date=new Date();
+		// 时
+		var hour = date.getHours();
+		if(hour<10){
+			hour='0'+hour;
+		}
+		console.log(hour);
+		
+		// 分
+		var minute = date.getMinutes();
+		if(minute<10){
+			minute='0'+minute;
+		}
+		console.log(minute);
+		
+		// 秒
+		var second = date.getSeconds();
+		if(second<10){
+			second='0'+second;
+		}
+		console.log(second);
+		
+		
+		var time = hour+'时'+minute+'分'+second+'秒';
+		
+		timer.innerHTML=time;
+		
+		// 更新时间
+		setTimeout(showtime,1000);
+		
+	}
+		showtime();
+</script>

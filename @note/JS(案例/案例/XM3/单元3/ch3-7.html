@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text"  id="input" placeholder="请输入诗人名字" />
+		<button type="button" onclick="dopush()">添加到名单末</button>
+		<button type="button" onclick="dounshift()">添加到名单前</button>
+		<div id="result"></div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var ru=document.getElementById("result");
+	var inputname=document.getElementById("input");
+	var writer=["李白","杜甫"];
+	ru.innerHTML=writer;
+	function dopush(){
+		writer.push(inputname.value)
+		ru.innerHTML=writer;
+		inputname.value="";
+	}
+	function dounshift(){
+		writer.unshift(inputname.value)
+		ru.innerHTML=writer;
+		inputname.value="";
+	}
+	
+</script>

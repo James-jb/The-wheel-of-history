@@ -1,0 +1,97 @@
+&=列如
+方位词=top bottom right left
+# 表不会
+
+id用# class用 .
+
+      外部样式表
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+     内部样式表
+<style>   </style>
+
+
+=============================
+     背景
+background-color    &RGB A
+background-image: url (' 地址 ')  
+background-repeat: no-repeat 不平布
+background-position+方位词 y 与 x
+background-attachment 随着页 滚动
+
+       文体
+ 1文本的对齐方式
+    text-align: 方位词
+ 2删除·下划线.....
+   text-decoration: [none,overline,line-through,underline]
+ 3文本缩进
+   text-indent:  多少px
+        字体
+  4font-family 字体系列
+    ont-size   大小
+        
+        链接         
+ hover - 当用户鼠标放在链接上时
+ text-decoration 用于删除链接中的下划线
+ 
+     # 列表
+ 无序列表 ul , li 
+ 有序列表 ol , 
+ 
+      ?表格边框
+ border
+  text-align:right;   设置水平对齐方式，向左，右，或中心：
+   text-align:right;  设置垂直对齐，比如顶部，底部或中间：
+   
+      盒子模型(Box Model)
+ Margin(外边距) - 清除边框外的区域，外边距是透明的。
+   用·方位词
+ Border(边框) - 围绕在内边距和内容外的边框。
+ Padding(内边距) - 清除内容周围的区域，内边距是透明的。
+   用·方位词
+ Content(内容) - 盒子的内容，显示文本和图像。
+ 
+     边框样式
+dotted: 定义一个点线边框
+dashed: 定义一个虚线边框
+solid: 定义实线边框
+double: 定义两个边框。 两个边框的宽度和 border-width 的值相同
+
+     轮廓（outline）
+ 位于边框边缘的外围，可起到突出元素的作用。
+ outline-style/color/width...	设置轮廓的样式
+ 
+      尺寸 (Dimension)
+  line-height 行高
+  max-height/width 最多高度/宽度
+  min-height/width     小
+  
+     隐藏元素 
+ display:none
+ 隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间
+ visibility:hidden
+ 可以隐藏某个元素，且隐藏的元素不会占用任何空间
+     如何改变一个元素显示
+ display:...
+ 
+      Position(定位)
+   1static 定位
+HTML 元素的默认值，即没有定位，遵循正常的文档流对象。
+静态定位的元素不会受到 top, bottom, left, right影响。
+  2fixed 定位
+元素的位置相对于浏览器窗口是固定位置。
+即使窗口是滚动的它也不会移动：
+  3relative 定位
+相对定位元素的定位是相对其正常位置。
+  4absolute 定位
+绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>
+  5sticky 定位
+sticky 英文字面意思是粘，粘贴，所以可以把它称之为粘性定位。
+  6重叠元素 z-index
+  
+      #overflow
+      
+       Float(浮动)
+   用左 右
+  清除浮动clear:both;
+  
+      对齐

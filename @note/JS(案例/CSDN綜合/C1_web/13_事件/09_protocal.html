@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委托</title>
+</head>
+<body>
+    <div>
+        <button>item1</button>
+        <button>item2</button>
+        <button>item3</button>
+        <button>item4</button>
+        <button>item5</button>
+    </div>
+</body>
+<script>
+    // 一般思路
+    // var buts = document.querySelectorAll("button");
+    // for (var i=0; i<buts.length; i++) {
+    //     buts[i].onclick = function() {
+    //         console.log(this.innerHTML)
+    //     }
+    // }
+
+
+    // 事件委托
+    // 自己不想做的事情委托给别人做
+    // 子级的事件全部由父级实现，通过e.target来区分
+    var div = document.querySelector("div");
+    div.onclick = function(e) {
+        console.log(e.target.innerHTML)
+    }
+</script>
+</html>

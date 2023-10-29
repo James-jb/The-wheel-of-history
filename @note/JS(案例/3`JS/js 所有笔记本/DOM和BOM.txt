@@ -1,0 +1,363 @@
+         js 包括 基础+DON+BON
+   API 是开发系统间接口,设备接口 API 的技术,基于 Http 协议
+              @查找的网页
+      https://developer.mozilla.org/zh-CN/ 
+
+ 三部分：获取元素、事件基础、操作元素、节点操作
+
+
+========================获取（逻辑不强）==============================
+         @ DOM 是来操作页面元素的
+    #文档：document   所有 
+     元素：element  父元素 
+       节点(所有都是)：node 
+
+         @获取·元素
+     1 document.getElementById     获取 ID 元素 
+     2  .getElementsByTagName         获取元素的集合 以伪数组存的
+     3  .getElementsByClassNeme(类名)    类名选择器 
+    ^4 document.querySelector(选择器)  是指定选择器的的第一个元素对象
+       document.querySelectorAll         指定选择器的所有对象 
+          选择器要加符合 1类加 .  2 id加 #  
+    
+   列如：
+       var 名 = document. getElementById('ID')
+    检查：
+       console.dir (timer );
+       var bodyEle = document.body  //返回<body>
+		     document.documentElement //返回html
+
+
+    #body html标签获取
+      document.body //返回body
+      document.documentElement; //返回html
+    列如：
+      var body = document.body;
+      console.log(body)；
+
+      var htmlEle = document.documentElement;
+      console.log(htmlEle);
+
+
+	      @事件·基础
+  过程:获取元素 -- 注册事件 -- 处理程序 
+    #事件类型
+   鼠标 左击点击 onclick 
+        经过触发 onmouseover()
+	     离开触发 onmousedown()
+   获得焦点触发  onfocus()	   
+   失去焦点触发  onblur()
+
+
+=========================操作==============================
+        1@ 操作+改变元素的内容
+     innerText  不识别html标签 不保留空格
+     innerHTML  识别标签   可用获取元素内容 (反之
+    列如：
+      p.innerText = (值) 
+
+         2@ 操作元素
+    #element.style 行内样式操作
+      element.className 类名样式操作
+     列如：
+       this.style.backgroundColor = 'red';  //属性采用驼峰命名 js权重高
+       this.className = 'chage';    //改名字吧
+
+         3@ 表单用 value 修改 
+    #注册
+      input.vallue = '字';
+    #禁用
+      btn.disabled = true --- 表单禁用
+       this.disabled = true;  //  this 指向函数的调用者 
+
+
+========================其他=============================
+         @隐藏 与 显示文本框
+    #获得 onfocus  |  失去 onblur 
+    列如：
+    text.onblur = function () {
+       if () { }
+    }
+
+         @排他思想
+    同一组元素，要 一个元素 实现样式，需要用的循环来排他
+      1 清楚全部      (干掉他人)
+      2 设置 当前元素 (留下自己)
+    例如：
+    for 中 for 来排除
+
+
+========================自定义属性==============================
+         @自定义属性
+   1 element.属性     //设置内置属性
+            自定义属性 index 
+   2 element.getAttribute('')   //设置自定义的属性
+
+	      @改变自身属性   
+	getAttribute --- 获取元素属性
+ 用法：
+    console.log(div.getAttribut('id')); 
+    更改自定义元素
+   Element.setAttribute()
+
+
+         @H5自定义属性    
+ Element.getAttribute('data-index');
+    #h5新增自定义属性
+    1 data-开头作为属性开头
+    2 element.data set.index
+    列如：
+      HTML用data-list-name= ""
+        Element.getAttribute ('名');
+        
+      data-index = "1'    dataset 是集合---ei11
+
+
+========================节点（）==============================
+         @节点操作
+    #拥有（类型  名称  值 ）
+     document.querySelector()
+     #父节点:
+       node.parentNode //返回的第一个父
+     #子节点：
+       1 node.childNodes //所有的子节点 包含元素(#不常用)
+       2 children ()
+   列如：
+       console.log( node.parentNode) 父级节点
+       console.log( ol . children) 子元素 
+
+    #第一个节点 
+      console.log(选择器.first ElementChild);
+    #最后一个 
+      console.log(选择器.last ElementChild)
+
+    #兄弟节点 包含元素节点
+      node.nest ElementSiblg
+     //下一个兄弟元素
+        node.next ElementSibling
+     //上一个
+        node.previous ElementSibling
+
+==========@@@创建节点 （添加删除 可以做发言条）=================
+    1// 创建节点
+        document.createElement('') 
+
+    2// 添加节点
+	 node--父级.append Child('子级') //添加到后面
+     node--父级.insert Before(children， 指定元素) //添加到前面
+
+    3// 删除节点 --- 父节点的子节点
+     node.removeChild(children [] );
+
+      #// 不跳转 
+         javasript: ;
+
+    4//复制节点 ---
+       node.cloneNode(); 
+          false 是浅拷贝
+          return 是深拷贝
+       node.cloneNode()
+
+===========@创建元素
+      # document.write()  // 重新创建 文档流会导致重置 
+    element.  innerHTML       // 创建元素	采用数组更高
+   document. createElement()  // 效率更高
+
+
+
+===================@DOM 重点核心 --- P247
+                #创建
+		document.write()  
+		innerHTML   
+		createElement
+	
+	#增
+		appendChid   //添加的前面
+		insertBefore //添加的后面
+
+                 #删
+	            removeChild 
+
+	#改
+	            元素src; href;     
+		 普通innerHTML; innerText
+		     表单value; type ; disabled 
+	         元素样式style; className
+
+	#查=（获取）
+	1DOM 提供： --- getElementByld;    getElementsByTagName
+	     2H5： --- querySelector ； querySelectorAll 
+	3节点获取： --- 父 parentNode   子children 
+			            兄弟 previousElementSibling、netElementSibling 
+
+
+                 #自定义属性操作
+		set Attribute:设置DOM,
+		get Attribute:得到DOW,
+		remove Attribute:移除属性,
+
+
+
+     #事件操作 —— 事件源. 类型 = 处理程序
+	     onclick 左击触发       onmousever 经过触发
+	     onblur失去交代
+
+
+========================事件高级=========================
+                 @注册事件     
+    1 传统事件：
+    列如： 
+      onclick = function( ) {
+       alert(' hi ')   }  
+
+    2 监听事件: 
+  addEventListener() 同一个元素可以添加多个
+  例如：
+   eventTarget.addEventListener(事件类型字符串,事件处理函数 [可选参数]);
+       Button[1].addEventListener('click', function(){
+			 alert(22) }
+
+    3 attachEvent()   以前i9支持+不太使用 （ie才行呀）
+
+	              @删除=事件
+	 1 传统   eventTarget.onclick = null; 
+	 2 监听注册--removeEventListener; 
+   eventTarget.removeEventListener(type, listener[,useCapture]); 
+
+
+	    @DOM事件流 = 扔石头到河里面
+事件流：将一个一个的东西运行一遍
+ 顺序：1 捕获阶段———上到下      2 冒泡阶段——小到上  
+   #捕获阶段 
+	  第三个true处于捕获 
+   #冒泡阶段 
+     第三个为false 和 省略处于冒泡 
+           #例如：
+     var son = documetn.querySelector('son');
+     son.addEventListener('click',  function() {
+        alert('son');
+     }, true\false)
+
+
+			@事件对象 —— P255
+ 是系统自己创建的
+     onclick=function( event = 对象事件) ({
+             })
+
+    1this   2e.target 触发事件  
+  e.target;  点击了那个 就返回
+   this;  绑定对象  
+   type;  返回事件的类型
+
+
+			@阻止默认行为---让链接不跳转
+    e.preventDefault( )
+
+         @阻止冒泡事件
+      stopPropagation () //取消传播 
+    conceBubble = true;  //取消泡泡 
+
+			@事件委托---就是给父级
+	 事件到父级节点上，然后用冒泡影响每个子节点。
+      addEventListener('click', function(e) {
+      })
+ 
+			@常用的鼠标事件
+    onclick 鼠标的左键触发
+    onmouseover 经过触发
+    onmouseout 离开触发
+  onfocus 获得鼠标焦点触发
+  onblur 失去鼠标触发
+   onmousemove 移动触发
+   onmouseup   弹开触发
+   onmousedown 按下触发
+
+     鼠标事件对象event 
+       e.clientX 返回鼠标相对浏览器的X
+       e.clientY 返回Y 
+      e.pageX 返回相对文档的X
+      e.pageY 返回文档的Y
+        e.screenX 电脑的X
+        e.screenY 电脑的Y
+
+                                                 @键盘事件
+    keyup  键盘松开触发
+       keydown 按下时候触发     不区分  #大小写
+    keypress 按下是后触发   +   //不能识别功能键的
+    
+   顺序：1down 2press 3up 
+      keyup  返回ASCII
+      keypress 区分字母的大·小写
+        测试ASCII码: console.log(e.keyCode);
+
+         keyCode 返回ASCII码判断
+=================================================
+=================================================
+
+
+
+========================BOM部分——浏览器========================= p268
+	         window 是顶级对象
+  @BOM 浏览器 ---- 是浏览器对象模型,进行窗口交互的浏览器
+
+         @窗口加载事件
+  window.onload = function(){}
+
+  window.addEventListener("load", function(){})
+
+         @调整窗口事件
+    window.addEventListener()
+    
+ 	      @定时器
+       1  setTimeout
+ 	   2  callback        回掉函数
+ 	   3  clearTimeout( timeoutID) 定时器
+ 	     
+ 	      @JS 的执行对列 = 单线程
+	web worker 同步(一个一个不完毕)和异步(一起完成)
+		异步用
+			普通:   click resize,
+			资源:   load error,
+			定时器: setInterval setTimeout,
+
+
+========================BOM对象==============================
+		   @location 对象(url 资源地址)
+	href-整个URL host-主机名 port-端口号 hash描点 search参数
+	
+	      @location 
+ location.assign(可以跳转)
+	location.replace(不记录)
+		location.reload(重加载)
+ 
+			@histroy 历史
+	back()    后退      |      forward() 前进
+	go()      都可以
+	                    
+	      @高级篇
+	 	element.offsetWidth -- 包括padding 边框
+		element.clientWidth -- 同上 但不包含边框
+		element.scrollWidth -- 自身的宽度,不包含边框
+			
+			offset -- offseLeft offsetTop == 获取大小
+			client -- clichtWidth chientHeight == 获取元素的大小
+			scroll -- scrollTop scrollLeft == 获得滚动距离
+	window.pageXOffset 获得滚动距离	                  
+	       		
+	       mouseenter  经过触发 子也一样
+		mouseover   经过盒子触发            
+	           
+	           @本地存储
+	生命周期：是浏览器的存活时间、
+	
+			      // 存储
+			sessionStorage.setltem 
+			      // 获取
+			sessionStorage.getItem()
+			      // 删除
+			sessionStorage.removeltem
+	           
+	               @js动画
+======================================================
+======================================================
+	=======================P310 没看完呀

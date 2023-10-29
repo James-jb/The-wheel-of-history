@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素</title>
+    <style>
+        .color {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <span>自挂东南枝</span>
+    </div>
+    <ul>
+        <li class="item">李白</li>
+        <li class="item">杜甫</li>
+        <li class="item">白居易</li>
+    </ul>
+</body>
+<script>
+    // var d1 = document.getElementById("d1");
+    // // console.log(d1.innerHTML)
+    // d1.innerHTML = "举头望明月，自挂东南枝";
+    // d1.className = "color";
+    // d1.style.fontSize = "30px";
+
+    // 1. 
+    var ul = document.getElementsByTagName("ul");
+    // 2.
+    // var lis = document.getElementsByClassName("item")
+    // // console.log(lis)
+    // for (var i=0; i<lis.length; i++) {
+    //     //遍历
+    //     lis[i].style.textAlign = "right";
+    //     lis[i].style.backgroundColor = "orange"
+    // }
+
+</script>
+</html>

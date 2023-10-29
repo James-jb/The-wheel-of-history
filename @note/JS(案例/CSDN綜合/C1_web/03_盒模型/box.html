@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            /* 内边距 */
+            /* 会增加盒模型的面积 */
+            /* padding: 30px 50px 70px 90px; */
+            /* padding-left: 50px; */
+
+            /* 边框  */
+            /* border: 10px solid tomato; */
+            /* border-right: 2px solid gold;
+            border-top: 5px dashed pink;
+            border-top-color: red; */
+
+            /* 圆角 */
+            /* border-radius: 50px; */
+            /* border: 2px solid pink;
+            border-radius: 70px; */
+            /* 为单一角设置 */
+            /* border-top-right-radius: 50px; */
+
+            /* 外边距 */
+            /* margin: 10px; */
+            /* margin-top: 100px; */
+        }
+
+        /* 三角形 */
+        .s {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            border: 20px solid pink;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-bottom-color: rgba(0,0,0,0);
+        }
+
+        .d1 {
+            margin-bottom: 100px;
+        }
+        .d2 {
+            margin-top: 150px;
+        }
+
+        .fa {
+            width: 300px;
+            height: 300px;
+            /* border: 1px solid red; */
+            /* padding-top: 50px; */
+            overflow: hidden;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="d1">CSDN</div> -->
+    <!-- <div class="s"></div> -->
+    <!-- <div class="d2">C1</div> -->
+
+    <div class="fa">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
+
+<!-- border会增加盒模型的面积 -->
+
+<!-- 盒模型面积:
+S = (bl + pl + width + pr + br) * (bt + pt + height + pb + bb) -->
+
+<!-- overflow: hidden的作用？
+1. 隐藏溢出
+2. 解决塌陷
+3. 清除浮动 -->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button" id="start">开始</button>
+		<button type="button" id="stop">停止</button>
+		<button type="button" onclick="ready()">准备</button>
+		<input type="text"  id="zhi"  />
+		<span id="num">
+			
+		</span>
+	</body>
+</html>
+<script type="text/javascript">
+	var x=1000;
+	var t;
+	var vzhi;
+	function ready()
+	{
+		var vzhi=document.getElementById("zhi").value;x=vzhi;
+	}
+	
+	function run()
+	{
+		if(x>0){
+			x=x-1;
+			document.getElementById("num").innerHTML=x;
+			t=setTimeout("run()",1);
+		}
+		else {
+			x=vzhi;
+			// x=x-1;
+			document.getElementById("num").innerHTML=x;
+			t=setTimeout("run()",1);
+		}
+		
+	}
+	function stoprun()
+	{
+		clearTimeout(t);
+	}
+	document.getElementById("start").onclick=run;
+	document.getElementById("stop").onclick=stoprun;
+</script>

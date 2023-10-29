@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				
+				border-radius: 100%;
+				box-shadow: 0 0 10px #f00;
+				padding: 5px;
+				box-sizing: border-box;
+				margin: 30px auto;
+			}
+			#box div:nth-child(1){
+				margin-top: 50px;width: 150px;
+				color: #00ff00;;
+				
+				background-color: #666;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="time"></div>
+			<div id="date"></div>
+			<div id="week"></div>
+		</div>
+	</body>
+</html>
+<script>
+	var weeks = new Array("星期7","星期1","星期2","星期3","星期4","星期5","星期6");
+	var vtime = document.getElementById("time");
+	var vdate = document.getElementById("date");
+	var vweek = document.getElementById("week");
+	
+	function showtime(){
+		var date = new Date();
+		
+		// 获取的年月日
+		var strdate = date.getFullYear()+'年'+(date.getMonth()+1)+'月'+date.getDate()+'日';
+		
+		// 小时 分钟 秒
+		var hour = date.getHours();
+		if(hour<10){
+			hour='0'+hour;
+		}
+		var minute = date.getMinutes();
+		if(minute<10){
+			minute='0'+minute;
+		}
+		var second = date.getSeconds();
+		if(second<10){
+			second='0'+second;
+		}
+		var time = hour+'时'+minute+'分'+second+'秒';
+		
+		
+		// 时间
+		vtime.innerHTML=time;
+		// 年月日
+		vdate.innerHTML=strdate;
+		// 星期几
+		vweek.innerHTML=weeks[date.getDay()];
+		
+		
+		setTimeout(showtime,100);
+	}
+	showtime();
+</script>

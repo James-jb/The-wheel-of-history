@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+			#myul{
+				list-style: none;
+				background-color: #05f;
+				padding: 0;
+				width: 306px;
+			}
+			#myul li,#myul a{
+				width: 100px;
+				height: 100px;
+				border: 1px solid #000;
+				float: left;
+				line-height: 100px;
+				
+				border-radius: 100%;
+			}
+			#myul a:hover{
+				cursor: pointer;
+				font-size: 30px;
+				background: red;
+			}
+			/* 抽到 变色 */
+			#myul .active{
+				background-color: #04ff00;
+				color: #fff;
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="myul">
+				<li>1等奖</li>
+				<li>2等奖</li>
+				<li>3等奖</li>
+				<li>参与奖</li>
+				
+				<a onclick="begin()">开始</a>
+				
+				<li>参与奖</li>
+				<li>5等奖</li>
+				<li>参与奖</li>
+				<li>4等奖</li>
+			</ul>
+		</div>
+	</body>
+</html>
+<script>
+	var box = document.getElementById('box');
+	var arli = box.getElementsByTagName('li');
+	
+	var li=[],timer=null;
+	
+	li[0]=arli[0];
+	li[1]=arli[1];
+	li[2]=arli[2];
+	
+	li[3]=arli[4];
+	li[4]=arli[7];
+	
+	li[5]=arli[6];
+	li[6]=arli[5];
+	li[7]=arli[3];
+	
+
+	
+	function start(){
+		var i=0;
+		var num=30+Math.floor(Math.random()*li.length);
+		
+		if(i<num){
+			timer = setInterval(function(){
+				for(var j=0;j<li.length;j++){
+					li[j].className="";
+				}
+				
+			li[i%li.length].className='active';
+			i++;
+				if(i == num){
+					clearInterval(timer);
+				}
+			},50);
+		}
+	}
+	
+	function begin(){
+		start();
+	}
+</script>

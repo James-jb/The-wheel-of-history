@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .item {
+            width: 70px;
+            height: 70px;
+            text-align: center; 
+            /* 继承性 */
+            float: left;
+        }
+        .item img {
+            width: 34px;
+        }
+        p {
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <img src="img/img1/1.png" alt="">
+        <p>很不推荐</p>
+    </div>
+    <div class="item">
+        <img src="img/img1/2.png" alt="">
+        <p>不推荐</p>
+    </div>
+    <div class="item">
+        <img src="img/img1/3.png" alt="">
+        <p>一般</p>
+    </div>
+    <div class="item">
+        <img src="img/img1/4.png" alt="">
+        <p>推荐</p>
+    </div>
+    <div class="item">
+        <img src="img/img1/5.png" alt="">
+        <p>强烈推荐</p>
+    </div>
+</body>
+</html>
+
+<!-- 居中问题：
+1. text-align: center;
+写在父级，使子级的文本内容及行标签，行块标签水平居中 -->

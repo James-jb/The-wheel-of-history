@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#pic img{
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="row1()">横向排列</button>
+		<button onclick="row2()">间隔</button>
+		<button onclick="row3()">去除点</button>
+		
+		<div id="pic">
+			<ul>
+				<li><img src="./img/1.jpeg" alt=""></li>
+				<li><img src="./img/1.jpeg" alt=""></li>
+				<li><img src="./img/1.jpeg" alt=""></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var vdiv = document.getElementById("pic");
+		var vul = vdiv.getElementsByTagName("ul")[0];
+		
+		function row1(){
+			vul.style.display="flex";
+		}
+		function row2(){
+			vul.style.display="flex";
+			vul.style.justifyContent="space-between";
+		}
+		function row3(){
+			vul.style.listStyle="none";
+		}
+	</script>
+</html>

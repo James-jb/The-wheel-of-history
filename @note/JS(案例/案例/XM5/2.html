@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			ul li{
+				width: 100px;
+				/* height: 20px; */
+				
+				margin-top: 5px;
+				border: 1px solid red;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="myul">
+			<li>首页</li>
+			<li>新闻</li>
+			<li>业务</li>
+		</ul>
+		
+		<button onclick="add()">添加</button>
+		<button onclick="re()">删除</button>
+		<div>
+			输入节点文本<input type="text" id="txt">
+		</div>
+	</body>
+</html>
+<script>
+	function add(){
+		var vtxt=document.getElementById("txt");
+		console.log(vtxt.value);
+		
+		if(vtxt.value.trim()==""){
+			var conf=confirm("内容不为空");
+			return false;
+		}
+		var vul = document.getElementById("myul");
+		var newli = document.createElement("li");
+		
+		// 写入
+		newli.innerHTML = vtxt.value;
+		vul.appendChild(newli);
+	}
+	function re(){
+		
+	}
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<input type="radio" name="ch" checked value="男">男
+			<input type="radio" name="ch" value="女">女
+		</div>
+		<div>
+			<input type="radio" name="love" value="唱歌">唱歌
+			<input type="radio" name="love" value="书法">书法
+			<input type="radio" name="love" value="跳舞" checked>跳舞
+			<button onclick="run()">查看选择值</button>
+		</div>
+	</body>
+</html>
+<script>
+	var vch = document.getElementsByName("ch");
+	var vlo = document.getElementsByName("love");
+	var valuech,valuelo;
+	
+	function run(){
+		valuech="";
+		valuelo="";
+		
+		// 赋值给男
+		for(var i=0;i<vch.length;i++){
+			if(vch[i].checked==true){
+				valuech=vch[i].value;
+			}
+		}
+		
+		// 赋值 特产
+		for(var i=0;i<vlo.length;i++){
+			if(vlo[i].checked==true){
+				valuelo=vlo[i].value;
+			}
+		}
+		console.log(valuech + valuelo);
+		alert("一个" +valuech+ "孩 喜欢 "+valuelo);
+	}
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#pic{
+				width: 300px;
+				height: 200x;
+				margin-top: 10px;
+				text-align: center;
+				padding-top: 50px;
+				background-color: #0cc;
+				
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="pic1()">设置背景图</button>
+		<button onclick="clear()">删除背景</button>
+		<button onclick="pic2()">背景图(不重复)</button>
+		<button onclick="pic3()">背景图(X方向)</button>
+		<button onclick="pic4()">背景图(重复)</button>
+		
+		<div id="pic">
+			<h2>《黄鹤楼》</h2>
+			<p>12345</p>
+			<p>56789</p>
+		</div>
+	</body>
+</html>
+<script>
+	var vdiv=document.getElementById("pic");
+	function pic1(){
+		vdiv.style.backgroundImage="url(img/1.jpeg)";
+	}
+	function clear(){
+		vdiv.style.backgroundImage="";
+	}
+	function pic2(){
+		vdiv.style.backgroundImage="url(img/1.jpeg)";
+		// 方向设置
+		vdiv.style.backgroundRepeat="no-repeat";
+	}
+	function pic3(){
+		vdiv.style.backgroundImage="url(img/1.jpeg)";
+		vdiv.style.backgroundRepeat="repeat-x";
+	}
+	function pic4(){
+		vdiv.style.backgroundImage="url(img/1.jpeg)";
+		vdiv.style.backgroundRepeat="repeat";
+	}
+</script>

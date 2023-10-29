@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			span{
+				border: aquamarine solid 2px;
+				margin: 10px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		已知数列：<br>
+		<div id="box">
+			<span>0</span>
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+		</div>
+		<button type="button" onclick="run()">求出下一个数</button><br>
+		现数列长度<span id="result">?</span>
+	</body>
+</html>
+<script type="text/javascript">
+	var x=[0,1,1,2],k;
+	var vbox=document.getElementById("box");
+	var changdu=document.getElementById("result");
+	function run()
+	{
+		k=x.length;
+		x[k]=x[k-1]+x[k-2];
+		var y=document.createElement("span");
+		y.innerHTML=x[k];
+		vbox.appendChild(y);
+		changdu.innerHTML=x.length;
+	}
+</script>

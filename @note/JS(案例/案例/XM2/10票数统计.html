@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			ul{
+				width: 500px;
+				border: 2p solid red;
+			}
+			li{
+				margin: 10px;
+				background-color: #0ee;
+				height: 100px;
+				line-height: 50px;
+				display: flex;
+				cursor: pointer;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		票数统计
+		<ul>
+			<li style="width: 10px;"><span>小明</span> <i>0</i></li>
+			<li style="width: 10px;"><span>小红</span> <i>0</i></li>				<li style="width: 10px;"><span>小军</span> <i>0</i></li>		
+		</ul>
+	</body>
+</html>
+<script>
+	var vul=document.getElementsByTagName("ul")[0];
+	var vli=vul.getElementsByTagName("li");
+	
+	for(var i=0 ; i<vli.length ; i++){
+		vli[i].onclick=function(){
+			var vn=this.getElementsByTagName('i')[0].innerHTML;
+			vn++;
+			var width=10+vn;
+			this.style.width=width+"%";
+			this.getElementsByTagName('i')[0].innerHTML=vn;
+		}
+	}
+</script>

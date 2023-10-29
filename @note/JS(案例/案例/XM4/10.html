@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			img{
+				width: 500px;
+			}
+			.show{
+				display: block;
+			}
+			.noshow{
+				display: none;
+			}
+			#icon dot{
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+			.dotgreen{
+				background-color: green;
+			}
+			.dotred{
+				background-color: red;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var t=0;
+				var run = null;
+				var vImg = document.getElementsByTagName('img');
+				var vdot = document.getElementById('icon').getElementsByTagName('dot');
+				console.log(vdot);
+				
+				function showpic(){
+					for(var i=0;i<vImg.length;i++){
+						vImg[i].className='noshow';
+						vdot[i].className='dotgreen';
+					}
+					t++;
+					if(t==vImg.length){
+						t=0;
+					}
+					vImg[t].className='show';
+					vdot[t].className='dotred';
+				}
+				run=setInterval(showpic,4000);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="img/1.jpg" class="show">
+			<img src="img/2.jpg" class="noshow">
+			<img src="img/3.jpg" class="noshow">
+		</div>
+		<div id="icon">
+			<dot class="dotred"></dot>
+			<dot class="dotgreen"></dot>
+			<dot class="dotgreen"></dot>
+		</div>
+	</body>
+</html>

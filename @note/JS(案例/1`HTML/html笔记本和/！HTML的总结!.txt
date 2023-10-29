@@ -1,0 +1,316 @@
+                1    HTML 基本文档
+<!DOCTYPE html>
+<html>
+<head>
+<title>文档标题</title>
+</head>
+<body>
+可见文本...
+</body>
+</html>
+               2     基本标签（Basic Tags）
+<h1>最大的标题</h1>
+<h2> . . . </h2>
+<h3> . . . </h3>
+<h4> . . . </h4>
+<h5> . . . </h5>
+<h6>最小的标题</h6>
+<p>这是一个段落。</p>
+<br> （换行）
+<hr> （水平线）
+<!-- 这是注释 -->
+              3     文本格式化（Formatting）
+<b>粗体文本</b>
+<code>计算机代码</code>
+<em>强调文本</em>
+<i>斜体文本</i>
+<kbd>键盘输入</kbd> 
+<pre>预格式化文本</pre>
+<small>更小的文本</small>
+<strong>重要的文本</strong>
+<abbr> （缩写）
+<address> （联系信息）
+<bdo> （文字方向）
+<blockquote> （从另一个源引用的部分）
+<cite> （工作的名称）
+<del> （删除的文本）
+<ins> （插入的文本）
+<sub> （下标文本）
+<sup> （上标文本）
+                  4      链接（Links）
+普通的链接：<a href="http://www.example.com/">链接文本</a>
+图像链接： <a href="http://www.example.com/"><img src="URL" alt="替换文本"></a>
+邮件链接： <a href="mailto:webmaster@example.com">发送e-mail</a>
+                 5          书签：
+<a id="tips">提示部分</a>
+<a href="#tips">跳到提示部分</a>
+                6         图片（Images）
+<img loading="lazy" src="URL" alt="替换文本" height="42" width="42">
+样式/区块（Styles/Sections）
+<style type="text/css">
+h1 {color:red;}
+p {color:blue;}
+</style>
+<div>文档中的块级元素</div>
+<span>文档中的内联元素</span>
+                  7      无序列表
+<ul>
+    <li>项目</li>
+    <li>项目</li>
+</ul>
+                  8      有序列表
+<ol>
+    <li>第一项</li>
+    <li>第二项</li>
+</ol>
+                  9       定义列表
+<dl>
+   <dt>项目 1</dt>
+    <dd>描述项目 1</dd>
+   <dt>项目 2</dt>
+    <dd>描述项目 2</dd>
+</dl>
+                 10   表格（Tables）
+<table border="1">
+  <tr>
+    <th>表格标题</th>
+    <th>表格标题</th>
+  </tr>
+  <tr>
+    <td>表格数据</td>
+    <td>表格数据</td>
+  </tr>
+</table>
+
+              11   框架（Iframe）
+<iframe src="demo_iframe.htm"></iframe>
+
+          12 @   表单（Forms）
+<form action="demo_form.php" method="post/get">
+<input type="text" name="email" size="40" maxlength="50">
+<input type="password">
+<input type="checkbox" checked="checked">
+<input type="radio" checked="checked">
+<input type="submit" value="Send">
+<input type="reset">
+<input type="hidden">
+<select>
+<option>苹果</option>
+<option selected="selected">香蕉</option>
+<option>樱桃</option>
+</select>
+<textarea name="comment" rows="60" cols="20"></textarea>
+</form>
+             13      实体（Entities）
+&lt;        等同于 <
+&gt;       等同于 >
+&#169;  等同于 ?
+
+              14     属性
+1. ID 
+ 指定元素
+ 
+ 2.class
+ 类别名称，进行归类，
+ 
+ 3.style
+ 设定样式
+ 
+ 4.title
+ 显示省略内容
+ 
+ 5.dir
+ 设定标签方向
+ 
+ 6.lang
+ 指定语言
+ 
+         
+            @100其他的@
+   pre ; 可保持原始格式
+      
+          @101页面部局元素
+   article; 定义 内容区块：一篇文章，视频
+   cection; 定义 区域，文章的章节
+   nav; 定义 目录导航
+   aside; 定义 侧边栏
+   figure/figcaption；定义媒体内容，标题
+   header/footer; 定义一组头，低
+   hgroup; 标题分组
+   address; 地址，联系
+   
+   header ;设置页面标题部分
+   footer；页面的底部
+   
+   article; 定义内容区块，如一篇文章
+                     
+  Sections;内容分d段
+  =特别的<div></div>
+  
+  aside ；侧边栏 可定义于article 之外的元素
+  Nav;   定义页面，给文字做一个目录的超链接
+  
+  Time; 代表24小时的时间
+ 列如”<time datetime ="2015-10-55"2015年20月10</time>
+ 
+ hgroup ; 给标题 分组
+ address ；来说明  主人 的信息
+ 
+ figure ;      媒体元素分组
+ figcaption ; 给figure定义标题
+                       
+            @102增强的表单
+form ；来定义表单
+=（input/but ton /select）
+action : 指定单发送到
+method : 发送到服务器
+get 
+post 
+
+例如：
+<form action="地址">
+用户名   <input type ="text">
+密码     <input type ="password" > 
+<input type = "submit">
+ 
+           input 属性
+ type ; 默认为 text 单行
+ name ; 输入内容识别名称
+ value ; 默认值
+ maxlength ; 输入的最大数字
+     readonly ; 只读，不能改变
+     disabled ; 提示作用
+     readonly;是必填的，否无法提交
+     
+     
+           @ type属性
+password ; 密码输入状态
+submit ; 提交按钮，将数组发送到服务器
+reset ; 重置
+button ; 普通按钮
+   imge ; 图片提交
+   hidden ; 隐藏段落 
+   url ; 要输入一个网页
+   tal ; 要输入电话号码
+     number ; 是一个数值
+     range ; 活动条
+        
+          时间类：
+  有  datetime/datetime-local/date/month/week
+  /time 
+  列如 ; 
+<form action="">
+         时间  <input type ="time"><br>
+         日子<input type ="date"><br>
+	     周<input type ="week"><br>
+	     本地时间<input type="datetime-local"><br>
+	     UTC时间<input type ="datetime-local"><br>
+<input type =submit>
+</form>
+	
+  color 是颜色选取
+ <input type="color"><br>	
+ 
+ search 和submit   是搜索的意思
+<form action="">	
+<input type ="search">	
+<input type ="submit">	
+	<form>
+
+place holde  对（text/url /tel/emai/password/search ）设置默认值
+autocomplet 为on /off  定义是否开启浏览器自动记忆功能
+autocomplet  自动获得焦点
+search  建立搜索框，用户输入关键字
+file        建立输入框，
+列如 ； 
+<form action="   ">	
+	    <input thype ="file">	
+	    <input type ="submit" value="上传">
+</form>	
+	  <input type ="search" placeholder="输入搜索关键字">
+	
+checkbox   复制框
+radio         单选框
+ input type="checkbox" nema="dx" value=="   ">后加名字
+<input type="checkbox" nema="dx" value=="  ">
+<input type="checkbox" nema="dx" value==" ”>	  
+<input type="checkbox" nema="dx" value=="  ">
+ 
+ au to focus   自动获得 焦点 
+ accesskey      手动焦点（按Alt手动）
+ taindex          按Tab ， 移动顺序
+ autocomplet   浏览器自动记忆
+ 
+ select 于  data list
+ select下拉菜单
+ <option>可让即选择
+
+ datalist 要和 input 配合
+ 
+ form ；将外内容 于 票单进行关联
+ novalidate ; 设置数据提交 “不进行检验”
+ encype ;  默认指
+ 
+ lable元素  <?>
+ 
+ textarea 
+ rows      设置多行行数（高度）
+ cols       设置多行每行的字数（宽度）
+ 
+  button 就做一个按钮
+  submit  
+  reset       同上
+ 
+ output 表单；当用户对数据的输入时触发
+ parseint 是js 的
+ 
+progress 
+max 是最大指
+value 是显示指
+form 是进度条多个
+
+meter 质量条 
+<max   min   low   high     option >
+
+   fieldset  /legend   /keygen  元素
+   
+          @103音频和视频
+vi deo 元素视频
+src 地址
+width宽
+htight 高
+aut oply自动播放
+loop循环播放
+con trol 显示，播放
+    poster 预览图片
+    pre load 不需要设置
+
+ so urce元素 来实现浏览器的兼容
+
+au dio 音频播放
+ 同视频差不多
+
+ embed   于js css 有关
+ obe ject  嵌入对象 视频 图片
+
+        @104画画@（不会呀）
+Canvas 画谱 
+ line width = 线宽数值
+stroke Style = 颜色指
+
+ moveTo 设置启点
+ line To 设置终点
+ stroke 开始绘画
+
+ @favicon图标
+ <link rel="shortcut icon" href="地址">
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body style="height: 100vh;width: 100vw;">
+		<div id="adv" style="position: absolute;">
+			广告内容			
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var directX=1,directY=1;
+	var tempX=0,tempY=0;
+	var adv=document.getElementById('adv');
+	function run()
+	{
+		tempX+=directX*2;
+		tempY+=directY*2;
+		
+		adv.style.top=tempY+'px';
+		adv.style.left=tempX+'px';
+		
+		if(tempX+adv.offsetWidth>=document.body.clientWidth||tempX<=0)
+		{
+			directX=-directX;
+		}
+		if(tempY+adv.offsetHeight>=document.body.clientHeight||tempY<=0)
+		{
+			directY=-directY;
+		}
+	}
+	setInterval("run()",10);
+</script>

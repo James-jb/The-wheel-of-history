@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 全局作用域
+    // 在全局作用域声明的变量，称之为全局变量
+    var nick = "csdn";
+
+    function changeNick() {
+        // 局部作用域定义的变量称之为局部变量
+        // 不能在全局作用域调用局部变量
+        var my = "策哥";
+        nick = "hello csdn";
+    }
+
+    changeNick();
+    console.log(my)
+</script>
+</html>
+
+<!-- 全局作用域
+
+局部作用域
+
+全局变量
+
+局部变量 -->

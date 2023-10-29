@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>请输入时间</h2>
+		
+		<input id="m" type="text" value="2"><br>
+		<button id="reset" onclick="reset()">准备</button>
+		<button id="start" onclick="">开始</button>
+		
+		剩下时间
+		<span id="num">0</span>
+	</body>
+</html>
+<script>
+	var s,m,f;
+	function reset(){
+		m=document.getElementById("m").value;
+		m--;
+		s=60;
+		document.getElementById("num").innerHTML=m+"分钟"+s+"秒";
+	}
+	reset();
+	
+	function run(){
+		if(s>0){
+			s=s-1;
+		}else if(m>0){
+			m--;
+			s=60;
+		}else{
+			clearTimeout(t);
+		}
+		
+		document.getElementById("num").innerHTML=m+"分钟"+s+"秒";
+		t=setTimeout("run()",1000);
+	}
+	document.getElementById("start").onclick=run;
+</script>

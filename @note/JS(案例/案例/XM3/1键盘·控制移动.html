@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#mike{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="mike" src="img/1.jpeg">
+	</body>
+</html>
+<script>
+	window.onload=function(){
+		var vmike = document.getElementById("mike");
+		
+		document.onkeydown = function(e){
+			e=e||window.event;
+			
+			switch(e.keyCode){
+				case 37:// 左<
+				vmike.style.left = vmike.offsetLeft-2+"px";
+				vmike.style.transform="scaleX(-1)";
+				break;
+				
+				case 39:// 右>
+				vmike.style.left = vmike.offsetLeft+2+"px";
+				vmike.style.transform="scaleX(1)";
+				break;
+				
+				case 38:// 上
+				vmike.style.top = vmike.offsetTop-2+"px";
+				vmike.style.transform="scaleY(-1)";
+				break;
+				
+				case 40:// 下
+				vmike.style.top = vmike.offsetTop+2+"px";
+				vmike.style.transform="scaleY(1)";
+				break;
+			}
+		}
+	}
+</script>

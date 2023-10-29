@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            padding: 30px;
+            background-color: lightgray;
+        }
+        input {
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            width: 92%;
+            height: 36px;
+            line-height: 36px;
+            display: block;
+            margin-left: 4%;
+        }
+        header>div {
+            width: 80%;
+            height: 36px;
+            background-color: #efefef;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+        #submit {
+            width: 40%;
+            margin-top: 40px;
+            line-height: 36px;
+            text-align: center;
+        }
+        #submit:hover, li p .del:hover {
+            cursor: pointer;
+        }
+
+        ul {
+            margin-top: 40px;
+        }
+        li  {
+            height: 60px;
+            margin: 10px;
+        }
+        li p {
+            height: 30px;
+        }
+        li p .nick, li p .message {
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 10px;
+        }
+        li p .time, li p .del {
+            float: right;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+        .up {
+            background-color: lightgrey;
+        }
+        .down {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <input id="nick" type="text" placeholder="请输入昵称">
+            </div>
+            <div style="margin-top: 40px;">
+                <input id="message" type="text" placeholder="请输入留言">
+            </div>
+            <div id="submit">提交</div>
+        </header>
+        <ul>
+            <!-- <li>
+                <p class="up">
+                    <span class="nick">leo</span>
+                    <span class="time">12:00:12</span>
+                </p>
+                <p class="down">
+                    <span class="message">hello world</span>
+                    <span class="del">删除</span>
+                </p>
+            </li> -->
+        </ul>
+    </div>
+</body>
+<script>
+    //标签 与 全局变量
+    var iptNick = document.getElementById("nick");
+    var iptMessage = document.getElementById("message");
+    var dSub = document.getElementById("submit");
+    var ul = document.querySelector("ul");
+
+    // 点击 提交 按钮
+    dSub.onclick = function() {
+        // 1. 获取输入框的内容，并判断不为空
+        if (iptNick.value == "" || iptMessage.value == "") {
+            alert("昵称或者留言不能为空！");
+            return ;
+        }
+        // 2. 创建对应的li标签，并添加到ul中
+        var li = document.createElement("li");
+        li.innerHTML = `
+                <p class="up">
+                    <span class="nick">${iptNick.value}</span>
+                    <span class="time">${getNowTime()}</span>
+                </p>
+                <p class="down">
+                    <span class="message">${iptMessage.value}</span>
+                    <span class="del">删除</span>
+                </p>
+        `;
+        // 新消息要在首位
+        if (ul.children.length == 0) {
+            ul.appendChild(li);
+        } else {
+            ul.insertBefore(li, ul.children[0]);
+        }
+        // 3. 清空输入框的内容
+        iptNick.value = "";
+        iptMessage.value = "";
+
+        // 4. 删除操作
+        var spanDel = li.querySelector(".del");
+        spanDel.onclick = function() {
+            ul.removeChild(this.parentNode.parentNode);
+        }
+    }
+
+    //获取当前时间
+    function getNowTime() {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        return [h,m,s].join(":");
+    }
+
+    
+</script>
+</html>

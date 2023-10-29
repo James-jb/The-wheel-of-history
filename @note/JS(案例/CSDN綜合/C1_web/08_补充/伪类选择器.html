@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        div {
+            /* 常态 */
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+        }
+        div:hover {
+            background-color: tomato;
+        }
+
+        a:link {
+            /* 链接前 */
+            color: tomato;
+        }
+        a:visited{
+            /* 链接后 */
+            color: skyblue;
+        }
+        a:hover {
+            color: gold;
+        }
+        a:active {
+            color: pink;
+        }
+        input {
+            outline: 0;
+        }
+        input:focus {
+            /* 获取焦点 */
+            border: 2px solid orange;
+        }
+        li:first-child {
+            /* 只能是第一个li，li是第一个子级元素 */
+            color: red;
+        }
+        li:first-of-type {
+            /* 第一个li类型的标签,li不用是第一个子元素 */
+            color: skyblue
+        }
+        /* li:nth-child(2) {
+            color: purple;
+        } */
+        li:nth-of-type(3n+1) {
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <a href="https://ac.csdn.net">CSDN</a>
+    <br>
+    <input type="text">
+    <ul>
+        <h1>送给各位同学</h1>
+        <li>劝学诗</li>
+        <li>书中自有千钟粟</li>
+        <li>书中自有黄金屋</li>
+        <li>书中车马多如簇</li>
+        <li>书中自有颜如玉</li>
+    </ul>
+</body>
+</html>
+<!-- a标签有4种伪类，建议按顺序书写 -->
+<!-- link  visited  hover  active -->

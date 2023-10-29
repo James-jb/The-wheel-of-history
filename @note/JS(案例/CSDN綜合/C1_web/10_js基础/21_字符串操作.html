@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+</head>
+<body>
+    <div id="ok">
+        <!-- <p>静夜思</p>
+        <p>床前明月光</p>
+        <p>疑是地上霜</p>
+        <p>举头望明月</p>
+        <p>低头思故乡</p> -->
+    </div>
+</body>
+<script>
+    var dOk = document.getElementById("ok");
+    var author = "李白"
+    // dOk.innerHTML = "<p>静夜思</p><p>"+author+"</p><p>床前明月光</p><p>疑是地上霜</p><p>举头望明月</p><p>低头思故乡</p>"
+    dOk.innerHTML = `
+        <p>静夜思</p>
+        <p>${author}</p>
+        <p>床前明月光</p>
+        <p>疑是地上霜</p>
+        <p>举头望明月</p>
+        <p>低头思故乡</p>
+    `;
+
+    // 获取字符串的长度 length
+    // console.log(author.length)
+
+    // toUppercase() 大写  toLowercase() 小写
+    // var str = "Hello CsDn";
+    // console.log(str.toUpperCase(),str.toLowerCase())
+
+    // split(规则) 以某种规则将字符串转为数组
+    // var str = "你-好-策哥";
+    // var arr = str.split("-");
+
+    // indexOf()  下标
+    // var str = "123123";
+    // console.log(str.indexOf(4))
+
+    // substring(start, end)[)  substr(start, length)
+    // var str = "一棵是枣树，另一棵也是枣树";
+    // console.log(str.substring(0,5));
+    // console.log(str.substr(4,2))
+
+    // replace(x,y)  用y替换x 
+    // var str = "一棵是枣树，另一棵也是枣树";
+    // console.log(str.replace("枣树","桃树"))
+
+    var str = "一棵是\"枣树\"另一棵也是枣树"
+    console.log(str);
+</script>
+</html>

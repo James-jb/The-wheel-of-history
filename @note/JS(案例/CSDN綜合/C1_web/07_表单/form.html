@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="https://ac.csdn.net" method="get">
+        <h1>CSDN会员注册</h1>
+        <input type="file">
+        <br>
+        <input type="text" name="email" placeholder="请输入邮箱">
+        <br>
+        <input type="password" name="pwd"  placeholder="请输入密码" required>
+        <br>
+
+        <p>选择性别</p>
+        boy<input type="radio" value="boy" name="sex">
+        girl<input checked type="radio" value="girl" name="sex">
+
+        <p>爱好</p>
+        读书<input type="checkbox" name="hobby" value="读书">
+        旅行<input type="checkbox" name="hobby" value="旅行">
+        音乐<input type="checkbox" name="hobby" value="音乐">
+        电影<input type="checkbox" name="hobby" value="电影">
+
+        <p>关注</p>
+        策哥<input type="checkbox" name="like" value="策哥">
+        阳哥<input type="checkbox" name="like" value="阳哥">
+        鹏哥<input type="checkbox" name="like" value="鹏哥">
+        郭姐<input type="checkbox" name="like" value="郭姐">
+
+        <br>
+        <input type="button" value="我是一个button，但是是个空button">
+
+        <br>
+        <input type="hidden" name="myname" value="cege">
+        <br>
+        选择省份
+        <select name="sheng">
+            <option value="湖南省">湖南省</option>
+            <option value="湖北省">湖北省</option>
+            <option value="河南省">河南省</option>
+            <option value="河北省">河北省</option>
+        </select>
+
+        <br>
+        留言板
+        <textarea style="resize: none;" name="message"></textarea>
+
+        <br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+</body>
+</html>

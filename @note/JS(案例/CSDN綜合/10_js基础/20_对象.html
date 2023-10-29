@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // key: value
+    // 策哥 : 姓名：赵策  年龄：18  性别：man  城市:石家庄   爱好：旅行
+    var cege = {
+        name: "赵策",
+        age: 18,
+        sex: "man",
+        city: "石家庄",
+        hobby: "travel"
+    }
+
+    // // 访问:
+    // // 1.  通过.语法
+    // console.log(cege.name)
+    // cege.name = "策哥";
+    // console.log(cege)
+    // // 2. 通过 [变量]
+    // var str = "age";
+    // console.log(cege[str])
+
+    // 可以为对象添加任意属性
+    cege.car = "爱玛";
+    // 删除 delete 
+    delete cege.car
+
+    // 使用 for  in 进行对象的遍历 
+    for(var key in cege) {
+        console.log(key)
+        console.log(cege[key])
+    }
+</script>
+</html>

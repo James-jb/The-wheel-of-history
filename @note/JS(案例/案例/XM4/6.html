@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width: 400px;
+				height: 150px;
+				padding: 50px;
+				background-color: #f90;
+				font-size: large;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="bnt">
+				<button id="pause">暂停</button>
+				<button id="start">开始</button>
+			</div>
+			<div id="showtime">
+				<span>00</span>
+				<span>分</span>
+				<span>00</span>
+				<span>秒</span>
+				<span>00</span>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	var showtime=document.getElementById("showtime");
+	showtime=showtime.getElementsByTagName("span");
+	var runner=null;
+	var mi=0,s=0,m=0;
+	// 前面+0
+	var si=0;
+	function run(){
+		mi++;
+		if(mi>=100){
+			mi=0;
+			s++;
+			if(s>=60){
+				s=0;
+				m++;
+				if(m>=60){
+					m=0;
+				}
+			}
+		}
+		
+		showtime[0].innerHTML=m;
+		
+		// 小于10 ++
+		if(si<10){
+			si="0"+s;
+			showtime[2].innerHTML=si;
+		}else{
+			showtime[2].innerHTML=s;
+			}
+		
+		
+		
+		showtime[4].innerHTML=mi;
+		
+		console.log(m,s,mi)
+		
+	}
+	var start=document.getElementById("start");
+	start.onclick=function(){
+		runner=setInterval("run()",10);
+	}
+	var pause=document.getElementById("pause")
+	pause.onclick=function(){
+		clearInterval(runner);
+	}
+</script>

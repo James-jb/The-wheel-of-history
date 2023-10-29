@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			img{
+				width: 20px;
+			}
+		</style>
+	</head>
+	<body style="height: 100vh;">
+		
+		<button id="start">开始</button>
+		<div id="rocket" style="position: absolute;">
+			<img src="img/x5.jpeg" alt="">
+		</div>
+		
+	</body>
+</html>
+<script>
+	var rocket=document.getElementById("rocket");
+	var t=80,runner=null;
+	
+	rocket.style.top=t+"vh";
+	rocket.style.left=40+"vw";
+	
+	function run(){
+		t--;
+		console.log(t);
+		rocket.style.top=t+"vh";
+	}
+	var start=document.getElementById("start");
+	
+	start.onclick=function(){
+		t=80;
+		rocket.style.top=t+"vh";
+		clearInterval(runner);
+		runner=setInterval("run()",10);
+	}
+</script>

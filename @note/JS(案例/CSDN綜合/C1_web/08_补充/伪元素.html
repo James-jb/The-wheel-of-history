@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        p {
+            color: skyblue;
+        }
+        p::before {
+            content: "大家好，我是";
+            color: orange;
+        }
+        p::after {
+            content: ",欢迎大家学习C1";
+            color: tomato;
+        }
+        div {
+            width: 200px;
+        }
+        div::first-line {
+            color: tomato;
+        }
+        div::first-letter {
+            font-size: 40px;
+        }
+        input::placeholder {
+            color: pink
+        }
+    </style>
+</head>
+<body>
+    <p>策哥</p>
+    <div>清晰定义软件工程师能力模型，面向开发者、技术爱好者、在校大学生等群体，通过机试（真人露脸、全程录屏、限时提交）测出应试者的真能力，筛选合格软件人才，建立应聘者与企业之间的信任关系。</div>
+    <input type="text" placeholder="我就是个测试的工具">
+</body>
+</html>

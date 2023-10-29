@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手风琴效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            background-image: url(img/xhr.jpeg);
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+        ul {
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            /* margin: 0 auto; */
+            /* 万能居中公式 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            margin-top: -200px;
+        }
+        li {
+            width: 80px;
+            height: 400px;
+            float: left;
+            background-size: cover;
+            background-position: center center;
+            /* 过渡 */
+            transition: .3s;
+        }
+        .open {
+            width: 480px;
+        }
+        li p {
+            width: 80px;
+            height: 400px;
+            background-color: rgba(255,255,255,.5);
+            color: white;
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="open" style="background-image: url(img/xhr.jpeg);">
+            <p>小黄人</p>
+        </li>
+        <li style="background-image: url(img/xss.jpeg);">
+            <p>小松鼠</p>
+        </li>
+        <li style="background-image: url(img/syw.jpeg);">
+            <p>小鹦鹉</p>
+        </li>
+        <li style="background-image: url(img/qe.jpeg);">
+            <p>企鹅</p>
+        </li>
+        <li style="background-image: url(img/ys.jpeg);">
+            <p>夜煞</p>
+        </li>
+    </ul>
+</body>
+<script>
+    // 获取所有的li
+    var lis = document.querySelectorAll("li");
+
+    //记录当前open的下标
+    var showIndex = 0;
+
+    // 使用for循环遍历，添加点击事件
+    for (var i=0; i<lis.length; i++) {
+        lis[i].index = i;  //为每一个li添加一个标记
+        lis[i].onclick = function() {
+            // 1. 收起展开的li
+
+            // 1.1 我不知道哪个li展开了，让所有的li都收起来
+            // for (var j=0; j<lis.length; j++) {
+            //     lis[j].className = "";
+            // }
+
+            // 1.2 做标记
+            // 判断点击的是否是展开的li
+            if (showIndex == this.index) {
+                return ;
+            }
+            lis[showIndex].className = "";
+
+            // 2. 打开点击的li
+            this.className = "open";
+            showIndex = this.index;  //修改标记值
+
+            // 3. 修改body的背景图
+            document.body.style.backgroundImage = this.style.backgroundImage;
+        }
+    }
+</script>
+</html>

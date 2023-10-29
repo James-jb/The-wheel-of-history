@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input id="input" type="text" placeholder="输入诗人的名字">
+		<button onclick="push()">添加到末尾</button>
+		<button onclick="shift()">添加到前面</button>
+		<div id="rusult"></div>
+	</body>
+</html>
+<script>
+	var re=document.getElementById("rusult");
+	var inputname=document.getElementById("input");
+	var writer=["李白","李浩然"];
+	re.innerHTML=writer;
+	
+	function push(){
+		writer.push(inputname.value);
+		re.innerHTML=writer;
+		inputname.value="";
+	}
+	function shift(){
+		writer.unshift(inputname.value);
+		re.innerHTML=writer;
+		inputname.value="";
+	}
+</script>

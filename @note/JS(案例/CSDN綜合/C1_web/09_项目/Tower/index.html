@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        h1 {
+            display: none;
+        }
+        h2 {
+            font-size: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin: 56px 0 14px;
+            color: #65a593;
+        }
+        p.info {
+            font-size: 20px;
+            line-height: 20px;
+            color: #888878
+        }
+        ul {
+            margin: 38px 0 ;
+            overflow: hidden;
+        }
+        ul li {
+            float: left;
+            color: #888878;
+        }
+        ul li:hover {
+            color: #65a593;
+            cursor: pointer;
+        }
+        .wrap {
+            min-width: 800px;
+            border-bottom: 1px solid #ececec;
+        }
+        .content {
+            width: 800px;
+            /* 让块标签水平居中 */
+            margin: 0 auto; 
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* part1 */
+
+        .item1 img {
+            width: 320px;
+            height: 90px;
+            margin: 116px 0 30px;
+        }
+        .item1 p:nth-of-type(1) {
+            font-size: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .item1 p:nth-of-type(2) {
+            font-size: 24px;
+            height: 24px;
+            line-height: 24px;
+            margin: 20px 0 75px;
+            color: #9f9f9f;
+        }
+        .item1 .register {
+            display: block;
+            width: 190px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 20px;
+            background-color: #65a593;
+            color: #fff;
+            margin: 0 auto;
+        }
+        .item1 p:nth-of-type(3) {
+            height: 18px;
+            line-height: 18px;
+            font-size: 18px;
+            margin: 20px 0 98px;
+        }
+        .item1 .login {
+            color: #65a593;
+        }
+
+        /* part 2 */
+        .item2 {
+            height: 160px;
+        }
+        .item2 .item {
+            width: 160px;
+            height: 160px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .item2 .item img {
+            width: 160px;
+            height: 90px;
+            margin-top: 22px;
+        }
+        .item2 .item p {
+            height: 48px;
+            line-height: 48px;
+            font-size: 14px;
+        }
+
+        /* part 3  && part 4 */
+        .item3 ul li {
+            width: 50%;
+        }
+        .item3 ul li:nth-of-type(1), .item3 ul li:nth-of-type(2) {
+            margin-bottom: 26px;
+        }
+        .item4 ul li {
+            width: 30%;
+        }
+        .item4 ul li:nth-of-type(2) {
+            margin: 0 5%;
+        }
+
+        /* part 5 */
+
+        .item5 .type {
+            margin: 38px 0 20px;
+        }
+        .item5 .type span:nth-of-type(2n) {
+            margin: 0 22px;
+        }
+        .item5 .type span:nth-of-type(2n+1):hover {
+            color: #65a593;
+            cursor: pointer;
+        }
+        .item5 img {
+            margin-bottom: 40px;
+        }
+
+        /* part 6 */
+        .item6 .mess {
+            width: 660px;
+            height: 90px;
+            line-height: 30px;
+            margin: 40px auto 66px;
+            overflow: hidden;
+            text-align: left;
+        }
+        .item6 .pics {
+            width: 720px;
+            height: 102px;
+            margin: 0 auto 38px;
+        }
+        .item6 .pics .item {
+            width: 180px;
+            height: 100px;
+            border-top: 2px solid #65a593;
+            float: left;
+            opacity: .5;
+        }
+        .item6 .pics .item:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+        .item6 .pics .item img {
+            margin-top: 30px;
+            float: left;
+            height: 56px;
+            width: 56px;
+            margin-left: 2px;
+        }
+        .item6 .pics .item div {
+            margin-top: 30px;
+            float: left;
+            height: 56px;
+            width: 110px;
+            margin-left: 12px;
+        }
+        .item6 .pics .item div .name {
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: left;
+        }
+        .item6 .pics .item div .role {
+            color: #949494;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        /* part 7 */
+        .item7 a {
+            display: block;
+            width: 180px;
+            height: 40px;
+            border: 2px solid #65a593;
+            color: #65a593;
+            text-align: center;
+            line-height: 40px;
+            font-size: 18px;
+            border-radius: 22px;
+            margin: 40px auto 76px;
+        }
+        .item7 a img {
+            margin: 5px;
+            margin-left: 20px;
+            float: left;
+        }
+        .item7 a span {
+            height: 30px;
+            line-height: 30px;
+            margin: 5px 10px;
+            float: left;
+        }
+        
+        /* part 8 */
+        .item8 .pics {
+            margin-bottom: 36px;
+        }
+        .item8 img {
+            margin: 10px 16px;
+        }
+
+        /* part 9 */
+        .item9 p:nth-of-type(1) {
+            margin: 40px 0 10px;
+        }
+        .item9 p, .item9 a {
+            font-size: 14px;
+            color: #9e9e9e;
+            margin: 0 25px;
+        }
+        .item9 img {
+            margin: 16px 0 72px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tower</h1>
+    <div class="wrap">
+        <div class="content item1">
+            <img src="img/1-1.png" alt="">
+            <p>你的网上办公室</p>
+            <p>红杉资本领投，三十万团队入驻</p>
+            <a class="register" href="###">免费注册</a>
+            <p>或 <a class="login" href="###">登录</a> </p>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item2">
+            <div class="item">
+                <img src="img/2-1.png" alt="">
+                <p>项目管理经验</p>
+            </div>
+            <div class="item">
+                <img src="img/2-2.png" alt="">
+                <p>项目管理经验</p>
+            </div>
+            <div class="item">
+                <img src="img/2-3.png" alt="">
+                <p>项目管理经验</p>
+            </div>
+            <div class="item">
+                <img src="img/2-4.png" alt="">
+                <p>项目管理经验</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item3">
+            <h2>掌控你的项目</h2>
+            <p class="info">告别繁琐的会议、拖沓的进度</p>
+            <ul>
+                <li>在线讨论</li>
+                <li>细分任务</li>
+                <li>文件共享</li>
+                <li>在线文档</li>
+            </ul>
+            <img width="648" src="img/3-1.png" alt="">
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item4">
+            <h2>管理你的团队</h2>
+            <p class="info">告别繁琐的会议、拖沓的进度</p>
+            <ul>
+                <li>在线讨论</li>
+                <li>细分任务</li>
+                <li>文件共享</li>
+            </ul>
+            <img width="648" src="img/4-1.png" alt="">
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item5">
+            <h2>他们都在使用Tower</h2>
+            <p class="info">用户超过20万</p>
+            <p class="type">
+                <span>互联网</span>
+                <span>|</span>
+                <span>教育</span>
+                <span>|</span>
+                <span>媒体</span>
+                <span>|</span>
+                <span>其他</span>
+            </p>
+            <img width="648" src="img/5-1.png" alt="">
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item6">
+            <h2>他们这样评价Tower</h2>
+            <p class="mess">我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥我是CSDN的策哥</p>
+            <div class="pics">
+                <div class="item">
+                    <img src="img/6-1.png" alt="">
+                    <div>
+                        <p class="name">纯银</p>
+                        <p class="role">蝉游记创始人</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/6-2.png" alt="">
+                    <div>
+                        <p class="name">纯银</p>
+                        <p class="role">蝉游记创始人</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/6-3.png" alt="">
+                    <div>
+                        <p class="name">纯银</p>
+                        <p class="role">蝉游记创始人</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/6-4.png" alt="">
+                    <div>
+                        <p class="name">纯银</p>
+                        <p class="role">蝉游记创始人</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item7">
+            <h2>支持你所有的设备</h2>
+            <p class="info">
+                iphone
+                <br>
+                or
+                <br>
+                ipad
+            </p>
+            <a class="download" href="###">
+                <img width="30" src="img/7-1.png" alt="">
+                <span>下载钉钉</span>
+            </a>
+            <img width="680" style="margin-bottom: 90px;" src="img/7-2.png" alt="">
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item8">
+            <h2>合作伙伴</h2>
+            <div class="pics">
+                <img src="img/8-1.png" alt="">
+                <img src="img/8-2.png" alt="">
+                <img src="img/8-3.png" alt="">
+                <img src="img/8-4.png" alt="">
+                <img src="img/8-5.png" alt="">
+                <img src="img/8-6.png" alt="">
+                <img src="img/8-7.png" alt="">
+                <img src="img/8-8.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="content item9">
+            <p>
+                <a href="###">联系我们</a>
+                <a href="###">联系我们</a>
+                <a href="###">联系我们</a>
+                <a href="###">联系我们</a>
+                <a href="###">联系我们</a>
+            </p>
+            <p>川********** &copy; ***********</p>
+            <img height="32" src="img/9.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

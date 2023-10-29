@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if</title>
+</head>
+<body>
+    <button onclick="show()">李白</button>
+</body>
+<script>
+    // 1 单个if
+    // if (判断条件) {
+    //     代码块
+    // }
+
+    // 2. if .. else
+    // if (判断条件) {
+    //     代码块A
+    // } else{
+    //     代码块B
+    // }
+    // if (false) {
+    //     console.log("csdn")
+    // } else {
+    //     console.log("c1")
+    // }
+
+    // 3. if ... else if ... else
+    // var score = 106;
+
+    // if (score > 60 && score < 70) {
+    //     console.log("恭喜你，及格了！")
+    // } else if (score > 70 && score < 80) {
+    //     console.log("同学，你得继续努力啊！")
+    // } else if (score > 80 && score < 90) {
+    //     console.log("怎么搞的，这几道题不应该啊！")
+    // } else if (score > 90 && score < 100) {
+    //     console.log("反思一下，错题抄写30遍！")
+    // } else if (score == 100) {
+    //     console.log("还不错，坚持住！")
+    // } else if (score > 100) {
+    //     console.log("给分给错了")
+    // } else {
+    //     console.log("同学，保持心情愉悦")
+    // }
+
+    function show() {
+        var n = rand(0,4);
+        console.log(n)
+        if (n === 0) {
+            alert("举头望明月，低头思故乡！");
+        } else if (n === 1) {
+            alert("长风破浪会有时，直挂云帆济沧海！");
+        } else if (n === 2) {
+            alert("举杯邀明月，对影成三人！");
+        } else {
+            alert("天生我材必有用，千金散尽还复来！");
+        }
+    }
+
+
+    // 随机函数
+    function rand(min, max) {
+        return Math.floor(Math.random() * (max-min) + min);
+    }
+</script>
+</html>

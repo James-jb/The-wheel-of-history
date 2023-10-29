@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div, span {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            margin: 10px;
+        }
+        /* .d2 { */
+            /* background-color: pink; */
+            /* position: relative; */
+            /* left: 100px; */
+            /* right: 50px; */
+            /* bottom: 50px; */
+        /* } */
+        .d1 {
+            background-color: tomato;
+        }
+        .d2 {
+            background-color: greenyellow;
+        }
+        .d3 {
+            background-color: skyblue;
+        }
+
+        div {
+            position: absolute;
+        }
+        p {
+            background-color: red;
+            position: absolute;
+        }
+
+        .dd1 {
+            width: 300px;
+            height: 300px;
+            background-color: tomato;
+            margin: 100px;
+            overflow: hidden;
+            position: absolute;
+        }
+        .dd2 {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            margin: 50px;
+            overflow: hidden;
+            position: absolute;
+        }
+        .dd3 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /* margin: 50px; */
+            position: absolute;
+            left: 10px;
+        }
+        section {
+            width: 100px;
+            height: 300px;
+            background-color: deepskyblue;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <!-- <span style="background-color: gold; position: absolute;" class="d3"></span> -->
+    <!-- <p>大郎该吃药了！</p> -->
+
+    <div class="dd1">
+        <div class="dd2">
+            <div class="dd3"></div>
+        </div>
+    </div>
+
+    <section></section>
+</body>
+</html>

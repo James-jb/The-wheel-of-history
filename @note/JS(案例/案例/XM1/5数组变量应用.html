@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var i=0;
+			var topic=[];
+			topic[topic.length]={no:'1', title:'火警号码是？'};
+			topic[topic.length]={no:'2', title:'交警的号码是？'};
+			topic[topic.length]={no:'3', title:'医生的号码是？'};
+			topic[topic.length]={no:'4', title:'我是谁？'};
+			
+			function Myfunction(){
+				i=Math.random()*topic.length;
+				i=parseInt(i);
+				
+				document.getElementById("result").innerHTML=topic[i].no + "." +topic[i].title;
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="Myfunction()">随机出题</button>
+		<h3 id="result"> </h3>
+	</body>
+</html>

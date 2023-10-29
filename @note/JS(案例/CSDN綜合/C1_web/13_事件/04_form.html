@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件</title>
+</head>
+<body>
+    <button onclick="tj()">我的提交</button>
+    <form action="https://www.csdn.net/">
+        <input id="ipt" type="checkbox" name="mine">
+        <input type="submit">
+    </form>
+</body>
+<script>
+    var ipt = document.getElementById("ipt");
+    var f = document.querySelector("form");
+    // 获取焦点
+    ipt.onfocus = function() {
+        console.log("获取焦点")
+    }
+
+    // 失去焦点
+    ipt.onblur = function() {
+        console.log("失去焦点")
+    }
+
+    // 提交
+    function tj() {
+        f.submit();
+    }
+
+    // change 内容修改，并失去焦点
+    ipt.onchange = function() {
+        console.log("change")
+    }
+    // input 内容修改 
+    ipt.oninput = function() {
+        console.log("input")
+    }
+</script>
+</html>

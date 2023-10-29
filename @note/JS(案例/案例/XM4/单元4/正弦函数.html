@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				border: #FF0000 solid 1px;
+			}
+		</style>
+	</head>
+	<body id="vbody">
+		<div id="box">	</div>
+	</body>
+</html>
+<script type="text/javascript">
+	
+	var box=document.getElementById("box");
+	var n=1;
+	var vb=document.getElementById("vbody");
+	function run()
+	{
+		
+		box.style.left=n/6+"px";
+		box.style.top=150+Math.sin(n/180)*100+"px";
+		var x=document.createElement("div");
+		x.style.left=n/6+"px";
+		x.style.top=150+Math.sin(n/180)*100+"px";
+		vb.appendChild(x);
+		n=n+10;
+		setTimeout(run,20);
+	}
+	run();
+	
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#icon p {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background-color: #0f0;
+				border-radius: 100%;
+				text-align: center;
+				line-height: 30px;
+				font-size: 30px;
+				
+				cursor: pointer;
+			}
+			.large{
+				width: 800px;
+				height: 800px;
+			}
+			.small{
+				width: 400px;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="icon">
+			<p>+</p>
+			<p>-</p>
+		</div>
+
+		<img id="pic" src="./img/1.jpeg" class="small">
+		<script>
+			var vpic = document.getElementById("pic");
+			var vicon =document.getElementById("icon").getElementsByTagName("p");
+			
+			vicon[0].onclick=function(){
+				vpic.setAttribute("class","large");
+			}
+			vicon[1].onclick=function(){
+				vpic.setAttribute("class","small");
+			}
+		</script>
+	</body>
+</html>

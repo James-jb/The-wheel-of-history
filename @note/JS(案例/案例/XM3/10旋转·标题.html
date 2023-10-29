@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			span{
+				display: inline-block;
+				margin: 10px;
+				width: 50px;
+				height: 50px;
+				
+				background-image: linear-gradient(to right,green,yellow);
+				
+				border: 1px solid red;
+				text-align: center;
+				line-height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input type="button" onclick="run()" value="旋转">
+			<!-- <button onclick="xz()">旋转</button> -->
+		</div>
+		<div id="tit">
+			<span>多</span>
+			<span>样</span>
+			<span>式</span>
+			<span>标</span>
+			<span>题</span>
+		</div>
+	</body>
+</html>
+<script>
+	var pan=document.getElementById("tit").getElementsByTagName("span");
+	function run(){
+		for(var i=0;i<pan.length;i++){
+			r=Math.random()*255;
+			r=Math.floor(r);
+		
+			g=Math.random()*255;
+			g=Math.floor(g);
+			
+			pan[i].style.backgroundImage="linear-gradient(to right, rgb("+r+",255,0), rgb(255,"+g+",0))";
+			
+			de=Math.random()*360;
+			pan[i].style.transform="rotate("+de+"deg)";
+		}
+	}
+
+	// function xz(){
+		
+	// }
+</script>

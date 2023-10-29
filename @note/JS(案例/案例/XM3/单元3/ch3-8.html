@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ctrl">
+			<input type="button" onclick="ru()" value="随机生成10人分数" />
+			<input type="button" onclick="mysort()" value="排序" />
+			<input type="button" onclick="my90()" value="大于等于90人数" />
+		</div>
+		<div id="data"></div>
+		<div id="ctrl">
+			大于等于90：<span id="my90">?	</span>人
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var ar=[];
+	var s;
+	var dat=document.getElementById("data");
+	function ru(){
+		console.clear();
+		dat.innerHTML="";
+		for(var i=0;i<10;i++){
+			s=60+Math.random()*39;
+			console.log(s);
+			ar[i]=Math.ceil(s);
+			var pan=document.createElement("span");
+			pan.style.display="inline-block";
+			pan.innerHTML=ar[i];
+			pan.style.textAlign="center";
+			pan.style.width="30px";
+			pan.style.border="1px solid red";
+			pan.style.margin="3px";
+			dat.appendChild(pan);
+		}
+	}
+	function mysort(){
+		ar.sort();
+		dat.innerHTML="";
+		for(var i=0;i<10;i++){
+			var pan=document.createElement("span");
+			pan.style.display="inline-block";
+			pan.innerHTML=ar[i];
+			pan.style.textAlign="center";
+			pan.style.width="30px";
+			pan.style.border="1px solid red";
+			pan.style.margin="3px";
+			dat.appendChild(pan);
+		}
+	}
+	function my90(){
+		var s=0;
+		for(var i=0;i<10;i++){
+			if(ar[i]>=90)
+				s++;
+		}
+		var my90=document.getElementById("my90");
+		my90.innerHTML=s;
+	}
+</script>
