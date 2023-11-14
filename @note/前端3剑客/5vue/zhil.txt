@@ -1,0 +1,34 @@
+安装
+Ajax
+node.js 平台
+vue | vue-cli脚手架
+element
+
+	在 超级cmd 配置的
+npm config set prefix "node.js安装位置"
+
+查看node.js位置
+npm config get prefix
+
+切换淘宝镜像
+npm config set registry https://registry.npm.taobao.org
+
+安装vue
+npm create vue@latest
+
+安装vue-cli
+npm create -g @vue/cli
+
+
+	在 文件cmd位置打开
+创建项目 命令行
+vue create 名称
+
+查看vue界面和配置
+vue ui
+
+运行
+npm run serve
+
+打包
+npm rum build
